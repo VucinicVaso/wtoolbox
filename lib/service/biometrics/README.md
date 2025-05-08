@@ -1,0 +1,3 @@
+# BiometricsService
+
+**BiometricsService** sluzi za prijavu korisnika skeniranjem prsta, lica...

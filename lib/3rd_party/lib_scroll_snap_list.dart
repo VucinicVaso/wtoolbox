@@ -1,0 +1,1 @@
+export 'package:scroll_snap_list/scroll_snap_list.dart';
