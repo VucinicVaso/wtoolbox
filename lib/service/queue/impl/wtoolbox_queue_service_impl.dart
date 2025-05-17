@@ -43,7 +43,7 @@ class WTQueueServiceImpl extends WTQueueService {
     if(headers!.isNotEmpty && !headers.containsKey('requestId')) { wsHeaders['requestId'] = uuid.v4(); }
     wsHeaders.addAll(headers);
 
-    Queue? q = Queue().fromJson(headers, jsonEncode(body));
+    Queue? q = Queue(headers: headers, body: jsonEncode(body));
     await Get.find<OutQueueRepository>().insert(q);
     wsHeaders['transportId'] = q!.id.toString();
 
@@ -61,7 +61,7 @@ class WTQueueServiceImpl extends WTQueueService {
       }
 
       if(!body.contains('transportId')) {
-        Queue q = Queue.fromJson(headers, body);
+        Queue? q = Queue(headers: headers, body: jsonEncode(body));
         bool? created = await Get.find<InQueueRepository>().insert(q);
         if(created) { Get.find<WTObservable>().notifySubscriber({ 'application': q.application, 'queue': q }); }
       }

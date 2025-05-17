@@ -58,24 +58,12 @@ import '../../component/form_builder/form_input_field/compact_textarea/wtoolbox_
 import '../../component/form_builder/form_input_field/compact_dropdown/wtoolbox_form_input_field_compact_dropdown_1.dart';
 import '../../component/form_builder/form_input_field/search/wtoolbox_form_input_field_search_1.dart';
 import '../../component/form_builder/form_input_field/text/wtoolbox_form_input_field_text_1.dart';
-import '../../component/form_builder/form_input_field/text/wtoolbox_form_input_field_text_2.dart';
-import '../../component/form_builder/form_input_field/text/wtoolbox_form_input_field_text_3.dart';
 import '../../component/form_builder/form_input_field/textarea/wtoolbox_form_input_field_textarea_1.dart';
-import '../../component/form_builder/form_input_field/textarea/wtoolbox_form_input_field_textarea_2.dart';
-import '../../component/form_builder/form_input_field/textarea/wtoolbox_form_input_field_textarea_3.dart';
 import '../../component/form_builder/form_input_field/protected/wtoolbox_form_input_field_protected_1.dart';
-import '../../component/form_builder/form_input_field/protected/wtoolbox_form_input_field_protected_2.dart';
-import '../../component/form_builder/form_input_field/protected/wtoolbox_form_input_field_protected_3.dart';
 import '../../component/form_builder/form_input_field/sealed/wtoolbox_form_input_field_sealed_1.dart';
-import '../../component/form_builder/form_input_field/sealed/wtoolbox_form_input_field_sealed_2.dart';
-import '../../component/form_builder/form_input_field/sealed/wtoolbox_form_input_field_sealed_3.dart';
 import '../../component/form_builder/form_input_field/file_picker/wtoolbox_form_input_field_file_picker.dart';
 import '../../component/form_builder/form_input_field/dropdown/wtoolbox_form_input_field_dropdown_1.dart';
-import '../../component/form_builder/form_input_field/dropdown/wtoolbox_form_input_field_dropdown_2.dart';
-import '../../component/form_builder/form_input_field/dropdown/wtoolbox_form_input_field_dropdown_3.dart';
 import '../../component/form_builder/form_input_field/date_picker/wtoolbox_form_input_field_date_picker_1.dart';
-import '../../component/form_builder/form_input_field/date_picker/wtoolbox_form_input_field_date_picker_2.dart';
-import '../../component/form_builder/form_input_field/date_picker/wtoolbox_form_input_field_date_picker_3.dart';
 import '../../component/form_builder/form_input_field/complex/wtoolbox_form_input_field_complex.dart';
 import '../../component/button/wtoolbox_button.dart';
 import '../../component/button/fab/wtoolbox_fab_extended.dart';
@@ -824,8 +812,7 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setMoreFieldsButtonLabel('moreFormFields'.tr)
           ..setMoreFieldsButtonLabelSize(16.0)
           ..setMoreFieldsButtonLabelColor(theme!.primary1)
-          ..setMoreFieldsButtonBackgroundColor(Colors.transparent)
-        ;
+          ..setMoreFieldsButtonBackgroundColor(Colors.transparent);
         return component;
       case WTFormVariant.basicForm1:
         var component = WTFormBasic1()
@@ -1018,46 +1005,7 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setSuffixColor(theme!.text4)
           ..setErrorTextColor(theme!.error1);
         return component;
-      case WTFormInputFieldVariant.textRegular2:
-        var component = WTFormInputFieldText2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..useNoneTextCapitalization()
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.right)
-          ..setTextInputType(TextInputType.text)
-          ..enableRegularBorder(true)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textRegular3:
-        var component = WTFormInputFieldText3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.left)
-          ..enableRegularBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textStyled1:
+        case WTFormInputFieldVariant.textStyled1:
         var component = WTFormInputFieldText1()
           ..setFocusNode()
           ..setBuildContext(getCurrentContext())
@@ -1076,80 +1024,8 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setSuffixColor(theme!.text4)
           ..setErrorTextColor(theme!.error1);
         return component;
-      case WTFormInputFieldVariant.textStyled2:
-        var component = WTFormInputFieldText2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..useNoneTextCapitalization()
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.right)
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor( theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textStyled3:
-        var component = WTFormInputFieldText3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..useNoneTextCapitalization()
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.left)
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
       case WTFormInputFieldVariant.textareaRegular1:
         var component = WTFormInputFieldTextarea1()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableRegularBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textareaRegular2:
-        var component = WTFormInputFieldTextarea2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableRegularBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textareaRegular3:
-        var component = WTFormInputFieldTextarea3()
           ..setFocusNode()
           ..setBuildContext(getCurrentContext())
           ..setGoogleFonts(fonts)
@@ -1180,77 +1056,8 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setHintColor(theme!.text4)
           ..setErrorTextColor(theme!.error1);
         return component;
-      case WTFormInputFieldVariant.textareaStyled2:
-        var component = WTFormInputFieldTextarea2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.textareaStyled3:
-        var component = WTFormInputFieldTextarea3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
       case WTFormInputFieldVariant.protectedRegular1:
         var component = WTFormInputFieldProtected1()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableRegularBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.protectedRegular2:
-        var component = WTFormInputFieldProtected2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..enableRegularBorder(true)
-          ..setTextAlign(TextAlign.right)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.protectedRegular3:
-        var component = WTFormInputFieldProtected3()
           ..setFocusNode()
           ..setBuildContext(getCurrentContext())
           ..setGoogleFonts(fonts)
@@ -1285,78 +1092,8 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setSuffixColor(theme!.text4)
           ..setErrorTextColor(theme!.error1);
         return component;
-      case WTFormInputFieldVariant.protectedStyled2:
-        var component = WTFormInputFieldProtected2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.right)
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.protectedStyled3:
-        var component = WTFormInputFieldProtected3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setTextAlign(TextAlign.left)
-          ..enableStyledBorder(true)
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefixColor(theme!.text4)
-          ..setSuffixColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
       case WTFormInputFieldVariant.sealed1:
         var component = WTFormInputFieldSealed1()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..disable()
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade8)
-          ..setBorderColor(theme!.shade8)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.sealed2:
-        var component = WTFormInputFieldSealed2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..disable()
-          ..setTextInputType(TextInputType.text)
-          ..setBackgroundColor(theme!.shade8)
-          ..setBorderColor(theme!.shade8)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setErrorTextColor(theme!.error1);
-        return component;
-      case WTFormInputFieldVariant.sealed3:
-        var component = WTFormInputFieldSealed3()
           ..setFocusNode()
           ..setBuildContext(getCurrentContext())
           ..setGoogleFonts(fonts)
@@ -1428,36 +1165,6 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setPrefix(iconData: Symbols.arrow_drop_down)
           ..setPrefixColor(theme!.text4);
         return component;
-      case WTFormInputFieldVariant.dropdownRegular2:
-        var component = WTFormInputFieldDropdown2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.arrow_drop_down)
-          ..setPrefixColor(theme!.text4);
-        return component;
-      case WTFormInputFieldVariant.dropdownRegular3:
-        var component = WTFormInputFieldDropdown3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.arrow_drop_down)
-          ..setPrefixColor(theme!.text4);
-        return component;
       case WTFormInputFieldVariant.dropdownStyled1:
       var component = WTFormInputFieldDropdown1()
         ..setFocusNode()
@@ -1473,36 +1180,6 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
         ..setPrefix(iconData: Symbols.arrow_drop_down)
         ..setPrefixColor(theme!.text4);
       return component;
-      case WTFormInputFieldVariant.dropdownStyled2:
-        var component = WTFormInputFieldDropdown2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.arrow_drop_down)
-          ..setPrefixColor(theme!.text4);
-        return component;
-      case WTFormInputFieldVariant.dropdownStyled3:
-        var component = WTFormInputFieldDropdown3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.arrow_drop_down)
-          ..setPrefixColor(theme!.text4);
-        return component;
       case WTFormInputFieldVariant.datePickerRegular1:
         var component = WTFormInputFieldDatePicker1()
           ..setFocusNode()
@@ -1518,68 +1195,8 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
           ..setPrefix(iconData: Symbols.calendar_month)
           ..setPrefixColor(theme!.text4);
         return component;
-      case WTFormInputFieldVariant.datePickerRegular2:
-        var component = WTFormInputFieldDatePicker2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.calendar_month)
-          ..setPrefixColor(theme!.text4);
-        return component;
-      case WTFormInputFieldVariant.datePickerRegular3:
-        var component = WTFormInputFieldDatePicker3()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.base1)
-          ..setBorderColor(theme!.base1)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.calendar_month)
-          ..setPrefixColor(theme!.text4);
-        return component;
       case WTFormInputFieldVariant.datePickerStyled1:
         var component = WTFormInputFieldDatePicker1()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.calendar_month)
-          ..setPrefixColor(theme!.text4);
-        return component;
-      case WTFormInputFieldVariant.datePickerStyled2:
-        var component = WTFormInputFieldDatePicker2()
-          ..setFocusNode()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 2.0, 'top': 0.0, 'right': 2.0, 'bottom': 8.0 })
-          ..setBackgroundColor(theme!.shade9)
-          ..setBorderColor(theme!.shade9)
-          ..setInputTextColor(theme!.text1)
-          ..setLabelColor(theme!.text4)
-          ..setHintColor(theme!.text4)
-          ..setPrefix(iconData: Symbols.calendar_month)
-          ..setPrefixColor(theme!.text4);
-        return component;
-      case WTFormInputFieldVariant.datePickerStyled3:
-        var component = WTFormInputFieldDatePicker3()
           ..setFocusNode()
           ..setBuildContext(getCurrentContext())
           ..setGoogleFonts(fonts)
