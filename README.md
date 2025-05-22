@@ -7,4 +7,7 @@ Sadrzi:
 - lokalna baza podataka
 - document servis (upload, download fajlova, generisanje PDF-a)
 - komponente za kreiranje UI-a
+- theme servis
+- translation servis
+- validator servis
 - ...
