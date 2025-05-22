@@ -9,7 +9,7 @@ class WTEncryptionImpl extends WTEncryption {
 
   @override
   void initEncryption() {
-    setRawKey('!WT!-secret-encryption-key-2025!');
+    setRawKey('wtoolbox-secret-encryption-key01');
     setEncryptKey(Key.fromUtf8(getRawKey()!));
     setIv(IV.fromLength(16));
     setEncrypter(Encrypter(AES(getEncryptKey()!)));
