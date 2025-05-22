@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../../3rd_party/lib_getx.dart';
 import '../../theme/wtoolbox_theme_service_extension.dart';
-import '../config/wtoolbox_component_configuration.dart';
 
 mixin WTComponentFactoryServiceConfig {
+
+  bool? isInitialized = false;
+  void initialize() { if(isInitialized == false) { isInitialized = true; } }
 
   String? translate(String? v) { return '$v'.tr; }
 
@@ -19,8 +21,8 @@ mixin WTComponentFactoryServiceConfig {
   WTThemeServiceExtension? theme;
   void setTheme(WTThemeServiceExtension? v) { theme = v; }
 
-  WTComponentConfiguration? componentConfiguration;
-  void setComponentConfiguration(WTComponentConfiguration? v) { componentConfiguration = v; }
-  void initComponentConfiguration() { componentConfiguration!.initComponentConfiguration(); }
+  double? deviceWidth, deviceHeight;
+  void setDeviceWidth(double? v) { deviceWidth = v; }
+  void setDeviceHeight(double? v) { deviceHeight = v; }
 
 }

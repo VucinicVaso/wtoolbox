@@ -34,7 +34,6 @@ import '../../service/theme/wtoolbox_theme_service.dart';
 import '../../service/theme/impl/wtoolbox_theme_service_impl.dart';
 import '../../service/component_factory/factory/wtoolbox_component_factory_service.dart';
 import '../../service/component_factory/factory/impl1/wtoolbox_component_factory_service_impl1.dart';
-import '../../service/component_factory/config/impl/wtoolbox_component_configuration_impl.dart';
 import '../../service/notification/wtoolbox_local_notification_service.dart';
 import '../../service/notification/impl/wtoolbox_local_notification_service_impl.dart';
 
@@ -74,8 +73,7 @@ class WTDependencyInjectionImpl extends WTDependencyInjection {
     WTHttpSupport.instance.check();
 
     WTComponentFactoryService? cFsI1 = WTComponentFactoryServiceImpl1()
-      ..setTheme(Get.find<WTThemeService>().themeExtensionService!)
-      ..setComponentConfiguration(WTComponentConfigurationImpl());
+      ..setTheme(Get.find<WTThemeService>().themeExtensionService!);
     Get.put<WTComponentFactoryService>(cFsI1);
   }
 

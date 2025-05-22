@@ -1,7 +1,7 @@
-# BmPlThemeExtensionService
+# ThemeExtensionService
 
-Servis **BmPlThemeExtensionService** sluzi za dinamicku izmjenu tema aplikacije.
+Servis **ThemeExtensionService** sluzi za dinamicku izmjenu tema aplikacije.
 
 Servis sadrzi dvije klase:
-- BmPlThemeService
-- BmPlThemeExtensionService
+- ThemeService
+- ThemeExtensionService

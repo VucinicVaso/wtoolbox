@@ -10,8 +10,8 @@ class WTLocalNotificationServiceImpl extends WTLocalNotificationService {
 
   @override
   Future<bool>? initialize() async {
-    // setChannelId('com.bura.mobile.platform.lite.buramobileplatformlite');
-    // setChannelName('com.bura.mobile.platform.lite.buramobileplatformlite');
+    // setChannelId('com.app.id');
+    // setChannelName('com.app.id');
     // setChannelDescription('WTOOLBOX notifications.');
 
     localNotificationPlugin = FlutterLocalNotificationsPlugin();
