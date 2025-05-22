@@ -1,8 +1,10 @@
 # Bootstrap
 
-Bootstrap sluzi za:
+Bootstrap klasa sluzi za:
  - registrovanje aplikacije,
  - pokretanje aplikacija,
- - registrovanje prevoda aplikacija, 
+ - registrovanje prijevoda aplikacija, 
  - registrovanje ruta aplikacija,
- - registrovanje servisa aplikacija.
+ - registrovanje servisa aplikacija,
+ - registrovanje kolekcija za lokalnu bazu,
+ - ...
