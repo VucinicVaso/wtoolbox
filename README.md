@@ -2,18 +2,16 @@
 
 
 ## ABOUT:
-Mini framework za kreiranje mobilnih aplikacija. 
-WToolBox sadrzi sledece servise:
-- websocket servis
-- oauth servis
-- lokalna baza podataka
-- document servis (upload, download fajlova, generisanje PDF-a)
-- komponente za kreiranje UI-a
-- theme servis
-- translation servis
-- validator servis
-- MVC podrska
-- ...
+Mini framework for creating mobile applications. WToolbox includes the following services:
+- WebSocket service
+- OAuth2 service
+- Local database
+- Document service (file upload, download, PDF generation)
+- UI components
+- Theme service
+- Translation service
+- Validator service
+-MVC support
 
 
 ## HOW-TO:
