@@ -11,9 +11,10 @@ abstract class WTThemeService {
 
   WTTheme? lightTheme;
   WTTheme? darkTheme;
-  void setLightTheme();
-  void setDarkTheme();
   void setThemes();
+
+  void useLightTheme();
+  void useDarkTheme();
 
   WTTheme? theme;
   ThemeData? themeData;

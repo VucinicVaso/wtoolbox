@@ -52,12 +52,12 @@ class WTThemeServiceImpl extends WTThemeService {
   }
 
   @override
-  void setLightTheme() {
+  void useLightTheme() {
     setTheme(wtType: WTThemeServiceEnums.light, wtTheme: lightTheme!);
   }
 
   @override
-  void setDarkTheme() {
+  void useDarkTheme() {
     setTheme(wtType: WTThemeServiceEnums.dark, wtTheme: darkTheme!);
   }
 
