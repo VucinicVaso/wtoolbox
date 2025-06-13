@@ -2,6 +2,7 @@
 
 Servis **ThemeExtensionService** sluzi za dinamicku izmjenu tema aplikacije.
 
-Servis sadrzi dvije klase:
+Servis sadrzi:
+- Theme
 - ThemeService
 - ThemeExtensionService
