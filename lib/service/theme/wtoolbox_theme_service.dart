@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'wtoolbox_theme_service_extension.dart';
 import 'wtoolbox_theme.dart';
 
-enum AppThemeServiceEnums {
+enum WTThemeServiceEnums {
   light,
   dark
 }
@@ -13,14 +13,13 @@ abstract class WTThemeService {
 
   WTTheme? lightTheme;
   WTTheme? darkTheme;
+  void setLightTheme();
+  void setDarkTheme();
   void setThemes();
 
   ThemeData? themeData;
   void setThemeData(ThemeData? tD);
 
-  void setTheme({ AppThemeServiceEnums? type, WTThemeServiceExtension? theme });
-
-  void setLightTheme();
-  void setDarkTheme();
+  void setTheme({ WTThemeServiceEnums? type, WTThemeServiceExtension? theme });
 
 }

@@ -9,7 +9,7 @@ class WTThemeServiceImpl extends WTThemeService {
 
   WTThemeServiceImpl() {
     setThemes();
-    setTheme(type: AppThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
+    setTheme(type: WTThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
   }
 
   @override
@@ -26,10 +26,10 @@ class WTThemeServiceImpl extends WTThemeService {
   }
 
   @override
-  void setTheme({ AppThemeServiceEnums? type, WTThemeServiceExtension? theme }) {
+  void setTheme({ WTThemeServiceEnums? type, WTThemeServiceExtension? theme }) {
     themeExtensionService = theme;
 
-    if(type == AppThemeServiceEnums.light) {
+    if(type == WTThemeServiceEnums.light) {
       setThemeData(
         ThemeData
           .light()
@@ -39,7 +39,7 @@ class WTThemeServiceImpl extends WTThemeService {
       );
     }
 
-    if(type == AppThemeServiceEnums.dark) {
+    if(type == WTThemeServiceEnums.dark) {
       setThemeData(
         ThemeData
           .dark()
@@ -52,12 +52,12 @@ class WTThemeServiceImpl extends WTThemeService {
 
   @override
   void setLightTheme() {
-    setTheme(type: AppThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
+    setTheme(type: WTThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
   }
 
   @override
   void setDarkTheme() {
-    setTheme(type: AppThemeServiceEnums.dark, theme: darkTheme!.getTheme()!);
+    setTheme(type: WTThemeServiceEnums.dark, theme: darkTheme!.getTheme()!);
   }
 
 }
