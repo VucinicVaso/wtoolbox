@@ -9,7 +9,7 @@ class WTThemeServiceImpl extends WTThemeService {
 
   WTThemeServiceImpl() {
     setThemes();
-    setTheme(type: WTThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
+    setTheme(wtType: WTThemeServiceEnums.light, wtTheme: lightTheme!);
   }
 
   @override
@@ -26,10 +26,11 @@ class WTThemeServiceImpl extends WTThemeService {
   }
 
   @override
-  void setTheme({ WTThemeServiceEnums? type, WTThemeServiceExtension? theme }) {
-    themeExtensionService = theme;
+  void setTheme({ WTThemeServiceEnums? wtType, WTTheme? wtTheme }) {
+    theme = wtTheme;
+    themeExtensionService = theme.getTheme()!;
 
-    if(type == WTThemeServiceEnums.light) {
+    if(wtType == WTThemeServiceEnums.light) {
       setThemeData(
         ThemeData
           .light()
@@ -39,7 +40,7 @@ class WTThemeServiceImpl extends WTThemeService {
       );
     }
 
-    if(type == WTThemeServiceEnums.dark) {
+    if(wtType == WTThemeServiceEnums.dark) {
       setThemeData(
         ThemeData
           .dark()
@@ -52,12 +53,12 @@ class WTThemeServiceImpl extends WTThemeService {
 
   @override
   void setLightTheme() {
-    setTheme(type: WTThemeServiceEnums.light, theme: lightTheme!.getTheme()!);
+    setTheme(wtType: WTThemeServiceEnums.light, wtTheme: lightTheme!);
   }
 
   @override
   void setDarkTheme() {
-    setTheme(type: WTThemeServiceEnums.dark, theme: darkTheme!.getTheme()!);
+    setTheme(wtType: WTThemeServiceEnums.dark, wtTheme: darkTheme!);
   }
 
 }

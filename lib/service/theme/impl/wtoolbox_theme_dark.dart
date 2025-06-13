@@ -5,8 +5,14 @@ import '../wtoolbox_theme_service_extension.dart';
 class WTThemeDark extends WTTheme {
 
   WTThemeDark() {
+    setName('Dark');
     setTheme();
   }
+
+  @override
+  void setName(String? v) { name = v; }
+  @override
+  String? getName() { return name; }
 
   @override
   void setTheme() {
@@ -46,7 +52,6 @@ class WTThemeDark extends WTTheme {
       shade11:  const Color(0xFFf3f5f7),
     );
   }
-
   @override
   WTThemeServiceExtension? getTheme() { return themeExtensionService!; }
 
