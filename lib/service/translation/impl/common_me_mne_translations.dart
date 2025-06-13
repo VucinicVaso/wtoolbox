@@ -1,6 +1,6 @@
-import 'package:wtoolbox/3rd_party/lib_getx.dart';
+import '../wtoolbox_translations.dart';
 
-class CommonMeMneTranslations extends Translations {
+class CommonMeMneTranslations extends WTTranslations {
 
   @override
   Map<String, Map<String, String>> get keys => {
@@ -8,25 +8,7 @@ class CommonMeMneTranslations extends Translations {
       "key": "${1}",
       "label": "me_MNE",
       "language": "Crnogorski",
-      "appTitle": "BuraCloud",
-      "applicationTitle": "BuraCloud",
-      "developedBy": "BURA \n CLOUD",
-      "developedByIcon": "bura_cloud_logo.svg",
-      "application_info": '''{
-        "name": {
-          "key": "Naziv aplikacije",
-          "value": "BuraCloud",
-          "icon": "bc_icon.png"
-        },
-        "version": {
-          "key": "Verzija",
-          "value": "1.0.0"
-        },
-        "developedBy": {
-          "key": "Razvijen od strane",
-          "value": "Bura Cloud Montenegro"
-        }
-      }''',
+      "developedBy": "Vaso Vucinic",
       "languages": '''[
         { 
           "key":      ${1},

@@ -1,8 +1,7 @@
 import 'dart:ui';
 import 'package:wtoolbox/3rd_party/lib_getx.dart';
 import '../wtoolbox_translation_service.dart';
-import '../common/common_translation.dart';
-import '../../../entity/language/language.dart';
+import 'common_translations.dart';
 
 class WTTranslationServiceImpl extends WTTranslationService {
 
@@ -10,29 +9,20 @@ class WTTranslationServiceImpl extends WTTranslationService {
     appKeys.clear();
     keys.clear();
     Get.translations.clear();
-    setInitTranslationLanguage();
-    setKeys(CommonTranslation().keys);
+    setInitialLocalization(label: 'en_US');
+    setKeys(CommonTranslations().keys);
   }
 
   @override
-  void setTranslation(Language? entity) {
-    translation = entity;
-    locale = Locale(translation!.label!);
+  void setLocalization({ String? label }) {
+    localization = label;
+    locale = Locale(localization!);
     Get.updateLocale(locale!);
   }
 
   @override
-  Language? getTranslation() { return translation; }
-
-  @override
-  void setInitTranslationLanguage() {
-    //setTranslation(LanguageEntity(key: 1, label: 'me_MNE', language: 'Montenegrin', selected: true));
-    setTranslation(Language(key: 2, label: 'en_US', language: 'English', selected: true));
-  }
-
-  @override
-  void setAccountTranslationLanguage(Language? lE) {
-    setTranslation(lE);
+  void setInitialLocalization({ String? label }) {
+    setLocalization(label: label);
   }
 
   @override

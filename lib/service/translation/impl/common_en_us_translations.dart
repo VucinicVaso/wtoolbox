@@ -1,32 +1,14 @@
-import 'package:wtoolbox/3rd_party/lib_getx.dart';
+import '../wtoolbox_translations.dart';
 
-class CommonEnUsTranslations extends Translations {
+class CommonEnUsTranslations extends WTTranslations {
 
   @override
   Map<String, Map<String, String>> get keys => {
     'en_US': {
       "key": "${2}",
-      "language": "English",
       "label": "en_US",
-      "appTitle": "",
-      "applicationTitle": "",
+      "language": "English",
       "developedBy": "Vaso Vucinic",
-      "developedByIcon": "wtoolbox_logo.svg",
-      "application_info": '''{
-        "name": {
-          "key": "Application Name",
-          "value": "",
-          "icon": "wtoolbox_icon.png",
-        },
-        "version": {
-          "key": "Version",
-          "value": "1.0.0"
-        },
-        "developedBy": {
-          "key": "Developed By",
-          "value": "Vaso Vucinic"
-        }
-      }''',
       "languages": '''[
         { 
           "key":      ${1}, 
