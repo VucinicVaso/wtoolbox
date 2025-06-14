@@ -10,16 +10,16 @@ enum WTThemeServiceEnums {
 abstract class WTThemeService {
 
   WTTheme? lightTheme;
-  WTTheme? darkTheme;
-  void setThemes();
-
+  void setLightTheme(WTTheme? wtTheme);
   void useLightTheme();
+
+  WTTheme? darkTheme;
+  void setDarkTheme(WTTheme? wtTheme);
   void useDarkTheme();
 
   WTTheme? theme;
   ThemeData? themeData;
   WTThemeServiceExtension? themeExtensionService;
-  void setThemeData(ThemeData? tD);
 
   void setTheme({ WTThemeServiceEnums? wtType, WTTheme? wtTheme });
 
