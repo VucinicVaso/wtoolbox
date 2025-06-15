@@ -1,4 +1,4 @@
-import 'package:wtoolbox/3rd_party/lib_encrypt.dart';
+import '../../3rd_party/lib_encrypt.dart';
 import '../wtoolbox_encryption.dart';
 
 class WTEncryptionImpl extends WTEncryption {
@@ -9,7 +9,7 @@ class WTEncryptionImpl extends WTEncryption {
 
   @override
   void initEncryption() {
-    setRawKey('wtoolbox-secret-encryption-key01');
+    setRawKey('#wtoolbox-encryption-key-!2025!#');
     setEncryptKey(Key.fromUtf8(getRawKey()!));
     setIv(IV.fromLength(16));
     setEncrypter(Encrypter(AES(getEncryptKey()!)));
