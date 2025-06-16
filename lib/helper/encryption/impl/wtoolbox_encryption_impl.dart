@@ -1,4 +1,4 @@
-import '../../3rd_party/lib_encrypt.dart';
+import '../../../3rd_party/lib_encrypt.dart';
 import '../wtoolbox_encryption.dart';
 
 class WTEncryptionImpl extends WTEncryption {

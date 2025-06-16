@@ -6,9 +6,9 @@ abstract class WTTranslationService extends Translations {
   Locale? locale;
   Locale? fallbackLocale = const Locale('me_MNE');
 
-  String? localization, initialLocalization;
-  void setLocalization({ String? label });
+  String? initialLocalization, localization;
   void setInitialLocalization({ String? label });
+  void setLocalization({ String? label });
 
   Map<String, Map<String, String>> appKeys = <String, Map<String, String>>{}.obs;
   @override

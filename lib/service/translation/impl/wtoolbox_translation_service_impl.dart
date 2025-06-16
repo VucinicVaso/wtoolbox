@@ -9,8 +9,14 @@ class WTTranslationServiceImpl extends WTTranslationService {
     appKeys.clear();
     keys.clear();
     Get.translations.clear();
-    setInitialLocalization(label: 'en_US');
     setKeys(CommonTranslations().keys);
+    setInitialLocalization(label: 'en_US');
+    setLocalization(label: initialLocalization!);
+  }
+
+  @override
+  void setInitialLocalization({ String? label }) {
+    initialLocalization = label;
   }
 
   @override
@@ -18,11 +24,6 @@ class WTTranslationServiceImpl extends WTTranslationService {
     localization = label;
     locale = Locale(localization!);
     Get.updateLocale(locale!);
-  }
-
-  @override
-  void setInitialLocalization({ String? label }) {
-    setLocalization(label: label);
   }
 
   @override

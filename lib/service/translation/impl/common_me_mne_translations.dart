@@ -87,7 +87,6 @@ class CommonMeMneTranslations extends WTTranslations {
       "invalidValidator": "''@value'' nije validan.",
       "negativeValidator": "''@value'' ne smije biti negativna.",
       // other
-      "recentTransactions": "Nedavne transakcije",
       "flyMenuAwaitLabel": "Sačekajte rezultat...",
     },
   };

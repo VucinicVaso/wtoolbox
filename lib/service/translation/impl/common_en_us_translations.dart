@@ -87,7 +87,6 @@ class CommonEnUsTranslations extends WTTranslations {
       "invalidValidator": "''@value'' is invalid.",
       "negativeValidator": "''@value'' must not be negative.",
       // other
-      "recentTransactions": "Recent Transactions",
       "flyMenuAwaitLabel": "Wait for the result...",
     },
   };
