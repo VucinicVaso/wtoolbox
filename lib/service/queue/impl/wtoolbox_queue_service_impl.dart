@@ -15,13 +15,15 @@ class WTQueueServiceImpl extends WTQueueService {
   Future<void> checkForUnSendMessages() async {
     List<Queue> list = await Get.find<OutQueueRepository>().getAll();
 
-    for(Queue q in list) {
-      if(!q.headers!.containsKey('requestId')) { q.headers!['requestId'] = uuid.v4(); }
-      q.headers!['transportId'] = q.id.toString();
+    if(list.isNotEmpty) {
+      for(Queue q in list) {
+        if(!q.headers!.containsKey('requestId')) { q.headers!['requestId'] = uuid.v4(); }
+        q.headers!['transportId'] = q.id.toString();
 
-      Get.find<WTConnectorService>().connected == true
-        ? Get.find<WTConnectorService>().send(headers: q.headers, body: q.body)
-        : WTLogger.write('QueueService.checkForUnSendMessages() wt_connector.error: Internet connection error.');
+        Get.find<WTConnectorService>().connected == true
+          ? Get.find<WTConnectorService>().send(headers: q.headers, body: q.body)
+          : WTLogger.write('QueueService.checkForUnSendMessages() wt_connector.error: Internet connection error.');
+      }
     }
   }
 
@@ -33,7 +35,7 @@ class WTQueueServiceImpl extends WTQueueService {
 
     Queue? q = Queue(headers: headers, body: jsonEncode(body));
     await Get.find<OutQueueRepository>().insert(q);
-    wsHeaders['transportId'] = q!.id.toString();
+    wsHeaders['transportId'] = q.id.toString();
 
     Get.find<WTConnectorService>().connected == true
       ? Get.find<WTConnectorService>().send(headers: wsHeaders, body: q.body)

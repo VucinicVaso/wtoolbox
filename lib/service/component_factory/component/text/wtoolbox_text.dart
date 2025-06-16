@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import '../wtoolbox_component.dart';
 
 abstract class WTText extends WTComponent {
