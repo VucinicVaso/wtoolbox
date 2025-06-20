@@ -79,7 +79,6 @@ class WTDependencyInjectionImpl extends WTDependencyInjection {
 
   @override
   Future<void> unregister() async {
-    // delete instances for services, repositories, database,
     await Get.delete<WTDevice>(force: true);
     await Get.delete<WTEncryption>(force: true);
     await Get.delete<WTObservable>(force: true);
@@ -103,8 +102,10 @@ class WTDependencyInjectionImpl extends WTDependencyInjection {
 
     await Get.find<WTDatabaseService>().close();
     await Get.delete<WTDatabaseService>(force: true);
+
+    dotenv.clean();
   }
 
 }
 
-WTDependencyInjection? dependencyInjection = WTDependencyInjectionImpl();
+WTDependencyInjection? dependecyInjection = WTDependencyInjectionImpl();

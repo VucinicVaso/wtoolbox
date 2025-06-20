@@ -8,11 +8,13 @@ import 'package:wtoolbox/3rd_party/lib_email.dart';
 import '../../../helper/logger/wtoolbox_logger.dart';
 import '../../app_lifecycle/wtoolbox_app_lifecycle_service.dart';
 import '../wtoolbox_http_service.dart';
+import '../helper/wtoolbox_http_support.dart';
 
 class WTHttpServiceImpl extends WTHttpService {
 
   WTHttpServiceImpl(String? certificate) {
     initSecurityContext(certificate);
+    WTHttpSupport.instance.check();
   }
 
   @override
@@ -106,12 +108,10 @@ class WTHttpServiceImpl extends WTHttpService {
       xFileList.addAll([ xfile ]);
 
       await Share.shareXFiles(xFileList, subject: subject, text: body);
-      Get.find<WTAppLifecycleService>().allow(true);
     }
     
     if(filePath == null) {
       await Share.share(body!, subject: subject);
-      Get.find<WTAppLifecycleService>().allow(true);
     }
   }
 

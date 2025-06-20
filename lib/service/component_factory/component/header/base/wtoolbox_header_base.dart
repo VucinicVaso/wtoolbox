@@ -288,8 +288,7 @@ class _WTHeaderBaseWidgetState extends State<WTHeaderBaseWidget> {
     if(
       backActionSvgFile != null || backActionSvgMemory != null || backActionSvgString != null || backActionSvgNetwork != null || backActionSvgAsset != null
     ) {
-      Widget? widget = WTComponentBuilder.emptyComponent();
-
+      Widget? widget  = WTComponentBuilder.emptyComponent();
       double? svgSize = backActionIconSize;
 
       if(backActionSvgFile != null) {
@@ -352,7 +351,6 @@ class _WTHeaderBaseWidgetState extends State<WTHeaderBaseWidget> {
           ),
         ),
         child: widget,
-        //child: w,
       );
     }
 

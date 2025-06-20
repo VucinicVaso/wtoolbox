@@ -149,14 +149,11 @@ enum WTButtonVariant {
   contrastPrimary,
   contrastSecondary,
   contrastTertiary,
-
   wideLg,
   wideMd,
-
   withIconPrimary,
   withIconSecondary,
   withIconTertiary,
-
   iconOnlyPrimary,
   iconOnlySecondary,
   iconOnlyTertiary,
@@ -186,7 +183,6 @@ enum WTTabsVariant {
 }
 
 enum WTLoadingComponentVariant {
-  onboarding1,
   loadingView,
   shimmerHeader,
   shimmerCard,

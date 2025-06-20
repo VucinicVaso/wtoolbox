@@ -81,7 +81,6 @@ import '../../component/tabs/wtoolbox_tabs.dart';
 import '../../component/tabs/regular/wtoolbox_tabs_regular.dart';
 import '../../component/tabs/aesthetic/wtoolbox_tabs_aesthetic.dart';
 import '../../component/loading_component/wtoolbox_loading_component.dart';
-import '../../component/loading_component/onboarding_view/wtoolbox_loading_onboarding_view.dart';
 import '../../component/loading_component/loading_view/wtoolbox_loading_view.dart';
 import '../../component/loading_component/shimmer_component/header/wtoolbox_loading_shimmer_header.dart';
 import '../../component/loading_component/shimmer_component/card/wtoolbox_loading_shimmer_card.dart';
@@ -1593,27 +1592,6 @@ class WTComponentFactoryServiceImpl1 extends WTComponentFactoryService {
   @override
   WTLoadingComponent? createLoadingComponent(WTLoadingComponentVariant variant) {
     switch(variant) {
-      case WTLoadingComponentVariant.onboarding1:
-        var component = WTLoadingOnboardingView()
-          ..setBuildContext(getCurrentContext())
-          ..setGoogleFonts(fonts)
-          ..setPadding(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setMargin(map: { 'left': 0.0, 'top': 0.0, 'right': 0.0, 'bottom': 0.0 })
-          ..setBackgroundColor(theme!.base1)
-          ..setTitleColor(theme!.text3)
-          ..setTitleBackgroundColor(theme!.base1)
-          ..setSubtitleColor(theme!.text4)
-          ..setSubtitleBackgroundColor(theme!.base1)
-          ..setLabelColor(theme!.text3)
-          ..setLabelBackgroundColor(theme!.base1)
-          ..setIcon(Symbols.arrow_back_ios)
-          ..setIconColor(theme!.text1)
-          ..setIconBackgroundColor(theme!.base1)
-          ..setPrimaryButtonLabelColor(theme!.primary1)
-          ..setPrimaryButtonBackgroundColor(theme!.base1)
-          ..setSecondaryButtonLabelColor(theme!.primary5)
-          ..setSecondaryButtonBackgroundColor(theme!.primary1);
-        return component;
       case WTLoadingComponentVariant.loadingView:
         var component = WTLoadingView()
           ..setBuildContext(getCurrentContext())
