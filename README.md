@@ -17,6 +17,3 @@ Mini framework for creating mobile applications. WToolbox includes the following
 ## HOW-TO:
 
 
-## BUGS:
-- Fix SVG file bug  for web application. Affected components: wtoolbox_header_base, wtoobox_card_list_info, wtoolbox_card_welcome. 
-
