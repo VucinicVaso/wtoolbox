@@ -62,7 +62,7 @@ class WTNotifierServiceImpl extends WTNotifierService {
 
     Get.find<WTSocket>().connected == true
       ? Get.find<WTSocket>().send(headers: headers, body: message.body)
-      : WTLogger.write('QueueService.checkForUnSendMessages() error: Internet connection error.');
+      : WTLogger.write('WTNotifierService.send() error: Internet connection error.');
   }
 
   @override

@@ -7,20 +7,12 @@ import 'package:wtoolbox/router/wtoolbox_router.dart';
 abstract class WTController<T> extends GetxController {
 
   // used to dismiss keyboard
-  void unFocusFocusNode() { FocusScope.of(Get.context!).unfocus(); }
-
-  // redirect to previous view
-  var previousView = ''.obs;
-  void setPreviousView(String view) { previousView.value = view; }
+  void unfocusFocusNode() { FocusScope.of(Get.context!).unfocus(); }
 
   // set controller route arguments when view gets initialized
   void init({ Map<String, dynamic>? arguments }) {
-    unFocusFocusNode();
-
-    if(arguments != null && arguments.isNotEmpty) {
-      if(arguments.containsKey('previousView')) { setPreviousView(arguments['previousView']); }
-      setRouteParams(arguments);
-    }
+    unfocusFocusNode();
+    setParams(arguments ?? {});
   }
 
   // init controller state
@@ -29,78 +21,58 @@ abstract class WTController<T> extends GetxController {
   // clear controller state
   Future<void> clearState();
 
-  // webSocket message listener
+  // notifier listener
   Future<void> listener(Map<String, dynamic>? message);
 
   // route arguments
-  var params = <String, dynamic>{}.obs;
-  void setRouteParams(Map<String, dynamic>? map) {
-    params.clear();
-    params.value = map!;
+  Map<String, dynamic>? params = <String, dynamic>{};
+  void setParams(Map<String, dynamic>? map) {
+    params!..clear()..addAll(map!);
   }
 
-  // close modal, popups...
+  // close modal
   void closeWindow() { Get.back(); }
 
   // navigate to the view
   Future<void> navigateTo({ String? route, String? previousRoute, Map<String, dynamic>? arguments }) async {
-    arguments!['previousView'] = previousRoute;
-    Get.toNamed(route!, arguments: arguments);
-    onClose();
+    if(previousRoute!.isNotEmpty) { arguments!['previousRoute'] = previousRoute; }
+    await Get.toNamed(route!, arguments: arguments);
+    await onClose();
   }
 
   // go to the view with no option of going back to the previous view
   Future<void> navigateOff({ String? route, String? previousRoute = '', Map<String, dynamic>? arguments }) async {
-    if(previousRoute!.isNotEmpty) { arguments!['previousView'] = previousRoute; }
-    Get.offNamed(route!, arguments: arguments);
-    onClose();
-  }
-
-  /// navigate to the view and return back with data
-  Future<dynamic>? getTo({ String? route, Map<String, dynamic>? arguments }) async {
-    arguments!['getBack'] = true;
-    return await Get.toNamed(route!, arguments: arguments);
-  }
-  Future<void> getBack() async {
-    Get.back(result: params);
-    onClose();
+    if(previousRoute!.isNotEmpty) { arguments!['previousRoute'] = previousRoute; }
+    await Get.offNamed(route!, arguments: arguments);
+    await onClose();
   }
 
   // return to the previous view
   Future<void> navigateBack() async {
-    if(params.containsKey('getBack') && params['getBack'] == true) {
-      await getBack();
+    String? redirectRoute = Get.find<WTRouter>().getRedirectRoute();
+
+    if(!params!.containsKey('previousRoute')) {
+      await navigateOff(route: redirectRoute, arguments: params);
     }
 
-    if(!params.containsKey('getBack')) {
-      if(params.containsKey('previousView')) { params.removeWhere((k, v) => k == 'previousView'); }
-
-      if(previousView.value.isEmpty) {
-        await navigateOff(
-          route: Get.find<WTRouter>().getRedirectRoute(),
-          arguments: params
-        );
-      }
-
-      if(previousView.value.isNotEmpty) {
-        await navigateTo(
-          route: previousView.value,
-          previousRoute: Get.find<WTRouter>().getRedirectRoute(),
-          arguments: params
-        );
-      }
+    if(params!.containsKey('previousRoute')) {
+      String? previousRoute = params!['previousRoute'];
+      params!.removeWhere((k, v) => k == 'previousRoute');
+        
+      await navigateTo(route: previousRoute, previousRoute: redirectRoute, arguments: params);
     }
   }
 
   @override
   Future onClose() async {
+    await clearState();
+    
     if(Get.isRegistered<T>()) {
-      await clearState();
-
       await Get
         .delete<T>(force: true)
         .then((v) => WTLogger.write('WTController.onClose(${T.toString()} = $v)'));
     }
+
     super.onClose();
   }
 
