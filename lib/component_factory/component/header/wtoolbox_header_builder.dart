@@ -1,30 +1,7 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:wtoolbox/external/lib_fonts.dart';
 
 class WTHeaderBuilder {
-
-  static TextStyle? textStyle({
-    String? googleFonts,
-    Color? textColor, 
-    double? fontSize, 
-    FontWeight? fontWeight = FontWeight.normal 
-  }) {
-    if(googleFonts != null && googleFonts.isNotEmpty) {
-      return GoogleFonts.getFont(
-        googleFonts,
-        color: textColor,
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-      );
-    }
-
-    return TextStyle(
-      color: textColor,
-      fontSize: fontSize,
-      fontWeight: fontWeight,
-    );
-  }
 
   static Widget? createNetworkImage({
     EdgeInsets? padding    = const EdgeInsets.all(0.0),

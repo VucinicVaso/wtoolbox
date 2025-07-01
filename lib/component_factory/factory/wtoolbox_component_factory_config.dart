@@ -13,10 +13,8 @@ mixin WTComponentFactoryConfig {
 
   void modalNavigateBack() { Get.back(); }
 
-  String? fonts;
-  void setTextFont({ String? type, String? font }) {
-    if(type == 'Google') { fonts = font; }
-  }
+  String? googleFonts;
+  void setGoogleFonts({ String? font }) { googleFonts = font; }
 
   WTThemeExtension? theme;
   void setTheme(WTThemeExtension? v) { theme = v; }

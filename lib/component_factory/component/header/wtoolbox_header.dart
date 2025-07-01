@@ -6,14 +6,11 @@ abstract class WTHeader {
 
   UniqueKey? getUniqueKey() { return UniqueKey(); }
 
-  double? width;
-  void setWidth(double? v) { width = v; }
-
   BuildContext? buildContext;
   void setBuildContext(BuildContext? v) { buildContext = v; }
 
-  String? googleFonts = '';
-  void setGoogleFonts(String? v) { if(v != null || v != '') { googleFonts = v; } }
+  double? width;
+  void setWidth(double? v) { width = v; }
 
   Color? backgroundColor;
   void setBackgroundColor(Color? v) { backgroundColor = v; }
@@ -108,10 +105,10 @@ abstract class WTHeader {
       'action':       action,
       'icon':         icon,
       'label':        label,
-      'linkLabel':    linkLabel,
       'networkImage': networkImage,
       'assetImage':   assetImage,
-      'memoryImage':  memoryImage
+      'memoryImage':  memoryImage,
+      'linkLabel':    linkLabel,
     });
   }
 
@@ -137,10 +134,10 @@ abstract class WTHeader {
     menuItems!.add({
       'action':       action,
       'icon':         icon,
-      'label':        label,
       'networkImage': networkImage,
       'assetImage':   assetImage,
-      'memoryImage':  memoryImage
+      'memoryImage':  memoryImage,
+      'label':        label,
     });
   }
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../wtoolbox_footer.dart';
-import '../../wtoolbox_component_builder.dart';
 
 class WTFooterFixed extends WTFooter {
 
@@ -16,8 +15,8 @@ class WTFooterFixed extends WTFooter {
         foregroundDecoration: const BoxDecoration(
           color: Colors.transparent,
         ),
-        child: WTComponentBuilder.createIcon(
-          iconData: e!['icon'],
+        child: Icon(
+          e!['icon'],
           size: itemIconSize,
           color: unselectedItemIconColor
         ),
@@ -30,8 +29,8 @@ class WTFooterFixed extends WTFooter {
           borderRadius: BorderRadius.circular(50.0),
           color: selectedItemBackgroundColor,
         ),
-        child: WTComponentBuilder.createIcon(
-          iconData: e['icon'],
+        child: Icon(
+          e['icon'],
           size: itemIconSize,
           color: selectedItemIconColor
         ),
@@ -43,8 +42,6 @@ class WTFooterFixed extends WTFooter {
   Widget? build() {
     itemIconSize  = width! * 0.060;
     itemLabelSize = width! * 0.035;
-    itemPadding   = itemPadding ?? const EdgeInsets.fromLTRB(20.0, 6.0, 20.0, 6.0);
-    itemMargin    = itemMargin ?? const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0);
 
     return BottomNavigationBar(
       key: getUniqueKey(),
@@ -57,14 +54,15 @@ class WTFooterFixed extends WTFooter {
       currentIndex: selectedItem!,
       selectedItemColor: selectedItemLabelColor,
       unselectedItemColor: unselectedItemIconColor,
-      selectedLabelStyle: textStyle(
-        textColor: selectedItemLabelColor,
+      selectedLabelStyle: TextStyle(
+        color: selectedItemLabelColor,
         fontSize: itemLabelSize,
-        fontWeight: FontWeight.bold
+        fontWeight: FontWeight.bold,
       ),
-      unselectedLabelStyle: textStyle(
-        textColor: unselectedItemLabelColor,
-        fontSize: itemLabelSize
+      unselectedLabelStyle: TextStyle(
+        color: unselectedItemLabelColor,
+        fontSize: itemLabelSize,
+        fontWeight: FontWeight.normal,
       ),
     );
   }
