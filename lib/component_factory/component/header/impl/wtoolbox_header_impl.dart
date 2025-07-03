@@ -280,9 +280,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
 
     /// backActionSvgFile, backActionSvgMemory, backActionSvgString, backActionSvgNetwork, backActionSvgAsset
     Widget? svgImageWidget = WTComponentBuilder.emptyComponent();
-    if(
-      backActionSvgFile != null || backActionSvgMemory != null || backActionSvgString != null || backActionSvgNetwork != null || backActionSvgAsset != null
-    ) {
+    if(backActionSvgFile != null || backActionSvgMemory != null || backActionSvgString != null || backActionSvgNetwork != null || backActionSvgAsset != null) {
       Widget? widget  = WTComponentBuilder.emptyComponent();
       double? svgSize = backActionIconSize;
 

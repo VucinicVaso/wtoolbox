@@ -11,8 +11,8 @@ abstract class WTSocket {
   String? subscribeDestination;
   void setSubscribeDestination(String? value) { subscribeDestination = value; }
 
-  String? messageSendAddress;
-  void setMessageSendAddress(String? value) { messageSendAddress = value!; }
+  String? sendDestination;
+  void setSendDestionation(String? value) { sendDestination = value!; }
 
   Map<String, String>? clientHeaders = <String, String>{};
   void setClientHeaders(Map<String, String>? headers) {
