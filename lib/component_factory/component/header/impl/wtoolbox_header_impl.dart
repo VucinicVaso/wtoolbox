@@ -2,7 +2,6 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_svg.dart';
-import '../../wtoolbox_component_builder.dart';
 import '../wtoolbox_header.dart';
 import '../wtoolbox_header_builder.dart';
 
@@ -232,8 +231,10 @@ class _ComponentWidgetState extends State<ComponentWidget> {
   }
 
   Widget? widgetsLeft() {
+    Widget emptyWidget = SizedBox.shrink();
+
     /// backActionIcon
-    Widget? backActionIconWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionIconWidget = emptyWidget;
     if(backActionIcon != null) {
       backActionIconWidget = Container(
         margin: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
@@ -249,7 +250,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionNetworkImage
-    Widget? backActionNetworkImageWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionNetworkImageWidget = emptyWidget;
     if(backActionNetworkImage != null) {
       backActionNetworkImageWidget = WTHeaderBuilder.createNetworkImage(
         margin: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
@@ -259,7 +260,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionAssetImage
-    Widget? backActionAssetImageWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionAssetImageWidget = emptyWidget;
     if(backActionAssetImage != null) {
       backActionAssetImageWidget = WTHeaderBuilder.createAssetsImage(
         margin: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
@@ -269,7 +270,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionMemoryImage
-    Widget? backActionMemoryImageWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionMemoryImageWidget = emptyWidget;
     if(backActionMemoryImage != null) {
       backActionMemoryImageWidget = WTHeaderBuilder.createMemoryImage(
         margin: const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
@@ -279,9 +280,9 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionSvgFile, backActionSvgMemory, backActionSvgString, backActionSvgNetwork, backActionSvgAsset
-    Widget? svgImageWidget = WTComponentBuilder.emptyComponent();
+    Widget? svgImageWidget = emptyWidget;
     if(backActionSvgFile != null || backActionSvgMemory != null || backActionSvgString != null || backActionSvgNetwork != null || backActionSvgAsset != null) {
-      Widget? widget  = WTComponentBuilder.emptyComponent();
+      Widget? widget  = emptyWidget;
       double? svgSize = backActionIconSize;
 
       if(backActionSvgFile != null) {
@@ -348,7 +349,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionLabel
-    Widget? backActionLabelWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionLabelWidget = emptyWidget;
     if(backActionLabel != null) {
       backActionLabel = backActionLabel!.length > 20 ? '${backActionLabel!.substring(0, 20)}...' : backActionLabel;
 
@@ -367,7 +368,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
     }
 
     /// backActionLinkLabel
-    Widget? backActionLinkLabelWidget = WTComponentBuilder.emptyComponent();
+    Widget? backActionLinkLabelWidget = emptyWidget;
     if(backActionLinkLabel != null) {
       backActionLinkLabel = backActionLinkLabel!.length > 20 ? '${backActionLinkLabel!.substring(0, 20)}...' : backActionLinkLabel;
 
@@ -504,8 +505,8 @@ class _ComponentWidgetState extends State<ComponentWidget> {
               style: TextButton.styleFrom(
                 padding: const EdgeInsets.all(0.0),
               ),
-              icon: iconWidget ?? WTComponentBuilder.emptyComponent(),
-              label: labelWidget ?? linkLabelWidget ?? WTComponentBuilder.emptyComponent()!,
+              icon: iconWidget ?? SizedBox.shrink(),
+              label: labelWidget ?? linkLabelWidget ?? SizedBox.shrink(),
             ),
           ),
         );
@@ -550,7 +551,7 @@ class _ComponentWidgetState extends State<ComponentWidget> {
                       color: menuItemIconColor
                     ),
                   
-                 m['icon'] == null && m['label'] == null ? SizedBox.shrink() : WTComponentBuilder.sizedComponent(width: 5.0)!,
+                 m['icon'] == null && m['label'] == null ? SizedBox.shrink() : SizedBox(width: 5.0),
 
                 m['label'] == null 
                   ? SizedBox.shrink()
