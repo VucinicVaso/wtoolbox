@@ -6,44 +6,41 @@ import '../wtoolbox_application_lifecycle.dart';
 class WTApplicationLifecycleImpl extends WTApplicationLifecycle {
 
   WTApplicationLifecycleImpl() {
-    allow(false);
+    allow();
+    setDuration(hours: 0, seconds: 30);
+  }
+
+  @override
+  void setDuration({ int? hours, int? seconds }) {
+    duration = Duration(hours: hours ?? 0, seconds: seconds ?? 30);
+  }
+
+  @override
+  void cancelTimer() { 
+    if(timer != null && timer!.isActive) { 
+      timer!.cancel(); 
+    }
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
-    if(state == AppLifecycleState.hidden) { await hidden(); }
+    if(state == AppLifecycleState.paused) { await paused(); }
 
     if(state == AppLifecycleState.resumed) { await resumed(); }
 
-    if(state == AppLifecycleState.detached) { await detached(); }
+    if(state == AppLifecycleState.hidden) { await hidden(); }
 
-    if(state == AppLifecycleState.paused) { await paused(); }
+    if(state == AppLifecycleState.detached) { await detached(); }
 
     if(state == AppLifecycleState.inactive) { await inactive(); }
   }
 
   @override
-  Future<void> hidden() async {
-    //allow(true);
-  }
-
-  @override
-  Future<void> resumed() async {
-    //allow(false);
-    cancelTimer();
-  }
-  
-  @override
-  Future<void> detached() async {
-    await redirectAction!();
-  }
-  
-  @override
   Future<void> paused() async {
-    timer!.value = Timer(
-      Duration(seconds: 30),
+    timer = Timer(
+      duration!,
       () async {
-        if(timer!.value.isActive && allowed!.value) {
+        if(timer!.isActive && allowed!) {
           await redirectAction!();
         }
       }
@@ -51,8 +48,19 @@ class WTApplicationLifecycleImpl extends WTApplicationLifecycle {
   }
 
   @override
-  Future<void> inactive() async {
-    //
+  Future<void> resumed() async {
+    cancelTimer();
   }
+
+  @override
+  Future<void> hidden() async {}
+
+  @override
+  Future<void> detached() async {
+    await redirectAction!();
+  }
+
+  @override
+  Future<void> inactive() async {}
 
 }
