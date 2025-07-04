@@ -28,11 +28,11 @@ abstract class WTApplicationStarter {
 
   // subscribe/unsubscribe application notifer
   WTNotifier? _notifier;
-  void subscribeObserver(WTNotifier? notifier) {
+  void subscribeNotifier(WTNotifier? notifier) {
     _notifier = notifier;
     Get.find<WTNotifierService>().subscribe(_notifier);
   }
-  void unsubscribeObserver() {
+  void unsubscribeNotifier() {
     Get.find<WTNotifierService>().unsubscribe(_notifier!.getTitle());
   }
 

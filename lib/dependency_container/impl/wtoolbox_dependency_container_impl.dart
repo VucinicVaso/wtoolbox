@@ -8,6 +8,8 @@ import 'package:wtoolbox/notifier/wtoolbox_notifier_service.dart';
 import 'package:wtoolbox/notifier/impl/wtoolbox_notifier_service_impl.dart';
 import 'package:wtoolbox/database/wtoolbox_database.dart';
 import 'package:wtoolbox/database/impl/wtoolbox_hive_database.dart';
+import 'package:wtoolbox/application_starter/wtoolbox_application_starter_service.dart';
+import 'package:wtoolbox/application_starter/impl/wtoolbox_application_starter_service_impl.dart';
 import 'package:wtoolbox/router/wtoolbox_router.dart';
 import 'package:wtoolbox/router/impl/wtoolbox_router_impl.dart';
 import 'package:wtoolbox/oauth2/wtoolbox_oauth2.dart';
@@ -41,7 +43,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTDevice>(WTDeviceImpl());
     Get.put<WTDatabase>(WTHiveDatabase());
     Get.put<WTEncryption>(WTEncryptionImpl());
-    Get.put<WTTranslation>(WTTranslationImpl());
+    Get.put<WTApplicationStarterService>(WTApplicationStarterServiceImpl());
     Get.put<WTRouter>(WTRouterImpl());
     Get.put<WTNotifierService>(WTNotifierServiceImpl());
     Get.put<WTOAuth2>(WTOAuth2Impl());
@@ -51,6 +53,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTImageService>(WTImageServiceImpl());
     Get.put<WTPDFService>(WTPDFServiceImpl());
     Get.put<WTHttpAdapter>(WTHttpAdapterImpl(dotenv.get('SSL_CERTIFICATE')));
+    Get.put<WTTranslation>(WTTranslationImpl());
     Get.put<WTThemeCatalog>(WTThemeCatalogImpl());
 
     WTComponentFactory? componentFactory1 = WTComponentFactoryImpl1()
@@ -66,6 +69,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     await Get.delete<WTTranslation>(force: true);
     await Get.delete<WTThemeCatalog>(force: true);
     await Get.delete<WTRouter>(force: true);
+    await Get.delete<WTApplicationStarterService>(force: true);
     await Get.delete<WTComponentFactory>(force: true);
     await Get.delete<WTOAuth2>(force: true);
     await Get.delete<WTBiometrics>(force: true);
