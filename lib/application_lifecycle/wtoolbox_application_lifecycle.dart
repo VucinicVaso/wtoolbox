@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
 
-abstract class WTAppLifecycle {
+abstract class WTApplicationLifecycle {
 
   Rx<Timer>? timer = Timer(const Duration(hours: 1), () {}).obs;
   void cancelTimer() { if(timer!.value.isActive) { timer!.value.cancel(); } }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
-import 'package:wtoolbox/application_lifecycle/wtoolbox_app_lifecycle.dart';
+import 'package:wtoolbox/application_lifecycle/wtoolbox_application_lifecycle.dart';
 import '../wtoolbox_scaffold.dart';
 
 class WTScaffoldImpl extends WTScaffold {
@@ -8,8 +8,9 @@ class WTScaffoldImpl extends WTScaffold {
   @override
   Widget? build() {
     return ComponentWidget(
-      unfocused:       unfocused,
+      key:             getUniqueKey(),
       globalKey:       globalKey,
+      unfocused:       unfocused,
       backgroundColor: backgroundColor,
       onSwipeAction:   onSwipeAction,
       header:          header,
@@ -65,7 +66,7 @@ class _ComponentWidgetState extends State<ComponentWidget> with WidgetsBindingOb
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    Get.find<WTAppLifecycle>().didChangeAppLifecycleState(state);
+    Get.find<WTApplicationLifecycle>().didChangeAppLifecycleState(state);
   }
 
   @override

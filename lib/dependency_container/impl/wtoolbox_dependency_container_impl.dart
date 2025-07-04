@@ -18,8 +18,8 @@ import 'package:wtoolbox/translation/wtoolbox_translation.dart';
 import 'package:wtoolbox/translation/impl/wtoolbox_translation_impl.dart';
 import 'package:wtoolbox/biometrics/wtoolbox_biometrics.dart';
 import 'package:wtoolbox/biometrics/impl/wtoolbox_biometrics_impl.dart';
-import 'package:wtoolbox/application_lifecycle/wtoolbox_app_lifecycle.dart';
-import 'package:wtoolbox/application_lifecycle/impl/wtoolbox_app_lifecycle_impl.dart';
+import 'package:wtoolbox/application_lifecycle/wtoolbox_application_lifecycle.dart';
+import 'package:wtoolbox/application_lifecycle/impl/wtoolbox_application_lifecycle_impl.dart';
 import 'package:wtoolbox/file_manager/file/wtoolbox_file_service.dart';
 import 'package:wtoolbox/file_manager/file/impl/wtoolbox_file_service_impl.dart';
 import 'package:wtoolbox/file_manager/image/wtoolbox_image_service.dart';
@@ -47,7 +47,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTRouter>(WTRouterImpl());
     Get.put<WTNotifierService>(WTNotifierServiceImpl());
     Get.put<WTOAuth2>(WTOAuth2Impl());
-    Get.put<WTAppLifecycle>(WTAppLifecycleImpl());
+    Get.put<WTApplicationLifecycle>(WTApplicationLifecycleImpl());
     Get.put<WTBiometrics>(WTBiometricsImpl());
     Get.put<WTFileService>(WTFileServiceImpl());
     Get.put<WTImageService>(WTImageServiceImpl());
@@ -73,7 +73,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     await Get.delete<WTComponentFactory>(force: true);
     await Get.delete<WTOAuth2>(force: true);
     await Get.delete<WTBiometrics>(force: true);
-    await Get.delete<WTAppLifecycle>(force: true);
+    await Get.delete<WTApplicationLifecycle>(force: true);
     await Get.delete<WTFileService>(force: true);
     await Get.delete<WTImageService>(force: true);
     await Get.delete<WTPDFService>(force: true);

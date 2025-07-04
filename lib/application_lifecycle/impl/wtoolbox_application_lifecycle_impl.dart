@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'dart:async';
 import 'package:flutter/material.dart';
-import '../wtoolbox_app_lifecycle.dart';
+import '../wtoolbox_application_lifecycle.dart';
 
-class WTAppLifecycleImpl extends WTAppLifecycle {
+class WTApplicationLifecycleImpl extends WTApplicationLifecycle {
 
-  WTAppLifecycleImpl() {
+  WTApplicationLifecycleImpl() {
     allow(false);
   }
 
