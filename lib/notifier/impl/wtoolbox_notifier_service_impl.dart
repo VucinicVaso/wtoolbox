@@ -19,17 +19,17 @@ class WTNotifierServiceImpl extends WTNotifierService {
   }
 
   @override
-  void unsubscribe(String? observerName) {
-    if(notifiers!.where((o) => o.getTitle() == observerName).isNotEmpty) {
-      notifiers!.removeWhere((o) => o.getTitle() == observerName);
+  void unsubscribe(String? title) {
+    if(notifiers!.where((o) => o.getTitle() == title).isNotEmpty) {
+      notifiers!.removeWhere((o) => o.getTitle() == title);
     }
   }
 
   @override
   void notifySubscriber(Map<String, dynamic>? message) async {
     if(notifiers!.where((o) => o.getTitle() == message!['header']['application']).isNotEmpty) {
-      final observer = notifiers!.firstWhere((o) => o.getTitle() == message!['header']['application']);
-      observer.notify(message);
+      final title = notifiers!.firstWhere((o) => o.getTitle() == message!['header']['application']);
+      title.notify(message);
     }
   }
 

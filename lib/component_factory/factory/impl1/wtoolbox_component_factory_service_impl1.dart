@@ -33,7 +33,7 @@ class WTComponentFactoryImpl1 extends WTComponentFactory {
           ..isUnfocused(false)
           ..setBackgroundColor(theme!.background1);
         return component;
-      case WTScaffoldType.unfocusedBase1:
+      case WTScaffoldType.basicUnfocused1:
         var component = WTScaffoldImpl()
           ..setGlobalKey()
           ..isUnfocused(true)
@@ -45,7 +45,7 @@ class WTComponentFactoryImpl1 extends WTComponentFactory {
           ..isUnfocused(false)
           ..setBackgroundColor(theme!.background2);
         return component;
-      case WTScaffoldType.unfocusedBase2:
+      case WTScaffoldType.basicUnfocused2:
         var component = WTScaffoldImpl()
           ..setGlobalKey()
           ..isUnfocused(true)

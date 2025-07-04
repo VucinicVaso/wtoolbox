@@ -1,8 +1,8 @@
 enum WTScaffoldType {
   basic1,
-  unfocusedBase1,
+  basicUnfocused1,
   basic2,
-  unfocusedBase2
+  basicUnfocused2
 }
 
 enum WTHeaderType {

@@ -16,7 +16,7 @@ class WTHttpAdapterImpl extends WTHttpAdapter {
 
   @override
   Future<void> initSecurityContext(String? certificate) async {
-    if(certificate != null) {
+    if(certificate != null || certificate != '') {
       try {
         final sslCertificate = await rootBundle.load(certificate!);
           
