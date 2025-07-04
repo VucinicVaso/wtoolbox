@@ -46,11 +46,10 @@ dependencies:
   easy_pdf_viewer: ^1.0.8                # pdf viewer
   share_plus: ^10.1.4                    # email lib
   flutter_svg: ^2.0.17                   # svg lib
-  scroll_snap_list: ^0.9.1               # lib for scrollable animated list
   group_list_view: ^1.1.1                # lib for group_list_view
   shimmer: ^3.0.0                        # shimmer loading effect lib
   date_picker_plus: ^4.2.0               # datepicker
-  signature: ^6.0.0                      #
+  signature: ^6.0.0                      # lib for signature
 
 dev_dependencies:
   flutter_test:

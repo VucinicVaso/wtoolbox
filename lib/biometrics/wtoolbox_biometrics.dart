@@ -22,7 +22,7 @@ abstract class WTBiometrics {
 
   Future<bool>? init();
 
-  Future<void> checkIfDeviceIsSupported();
+  Future<void> isDeviceIsSupported();
 
   Future<void> checkForBiometricsSupport();
 

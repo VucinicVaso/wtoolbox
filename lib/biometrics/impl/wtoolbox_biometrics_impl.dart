@@ -15,7 +15,7 @@ class WTBiometricsImpl extends WTBiometrics {
     setLocalAuth();
     if(!isAllowedToAuthenticateWithBiometrics()!) { return false; }
 
-    await checkIfDeviceIsSupported();
+    await isDeviceIsSupported();
     if(!isAllowedToAuthenticateWithBiometrics()!) { return false; }
 
     await checkForBiometricsSupport();
@@ -26,7 +26,7 @@ class WTBiometricsImpl extends WTBiometrics {
   }
 
   @override
-  Future<void> checkIfDeviceIsSupported() async {
+  Future<void> isDeviceIsSupported() async {
     bool? check = await getLocalAuth()!.isDeviceSupported();
     setIsAllowedToAuthenticateWithBiometrics(check);
   }

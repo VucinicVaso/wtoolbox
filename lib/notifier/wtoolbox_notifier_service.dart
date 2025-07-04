@@ -6,7 +6,6 @@ abstract class WTNotifierService {
   List<WTNotifier>? notifiers = List<WTNotifier>.empty(growable: true);
 
   void subscribe(WTNotifier? notifier);
-
   void unsubscribe(String? title);
 
   void notifySubscriber(Map<String, dynamic>? message);
