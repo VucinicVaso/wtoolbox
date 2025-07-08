@@ -1,0 +1,63 @@
+name: wtoolbox
+description: "sevices for developing mobile apps."
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8                # IOS icons lib
+  font_awesome_flutter: ^10.7.0          # font_awesome icons libs
+  font_awesome_flutter_named: ^1.1.2+1   # font_awesome icons libs
+  google_fonts: ^6.2.1                   # fonts
+  material_symbols_icons: ^4.2811.0      # material symbols and icons
+  icons_launcher: ^3.0.0                 # launcher icon
+  flutter_dotenv: ^5.2.1                 # .env library
+  get: ^4.6.6                            # getX (state management, translation, themes, mvc...) lib
+  http: ^1.3.0                           # http lib
+  stomp_dart_client: ^2.1.3              # websockets (stomp) lib
+  hive: ^2.2.3                           # hive (db) lib
+  hive_flutter: ^1.1.0                   # hive (db) lib for flutter
+  encrypt: ^5.0.3                        # lib for a set of high-level APIs over PointyCastle for two-way cryptography.
+  uuid: ^4.5.1                           # uuid generator
+  device_info_plus: ^11.3.0              # lib for providing detailed information about the device
+  flutter_appauth: ^8.0.3                # OAuth lib
+  local_auth: ^2.3.0                     # biometrics
+  webview_flutter: ^4.10.0               # lib for displaying web pages
+  syncfusion_flutter_charts: ^28.2.5+1   # lib for charts
+  mobile_scanner: ^6.0.6                 # lib qr code scanner
+  date_format: ^2.0.9                    # lib for date formatting
+  intl: ^0.19.0                          #
+  collection: ^1.19.1                    # collections and utilities functions and classes related to collections.
+  xml: ^6.5.0                            # xml
+  path: ^1.9.1                           # string-based path manipulation lib
+  mime: ^2.0.0                           # utilities lib for handling media (MIME) types
+  path_provider: ^2.1.5                  # lib for getting commonly used locations on host platform file systems
+  file_picker: ^8.1.7                    # lib that allows you to use a native file explorer
+  image: ^4.5.2                          # lib which provides server and web apps the ability to load, manipulate, and save images
+  image_picker: ^1.1.2                   # plugin for selecting images from the Android and iOS image lib
+  image_cropper: ^9.0.0                  # image cropper
+  flutter_html_to_pdf_plus: ^0.1.0       # html to pdf
+  easy_pdf_viewer: ^1.0.8                # pdf viewer
+  share_plus: ^10.1.4                    # email lib
+  flutter_svg: ^2.0.17                   # svg lib
+  group_list_view: ^1.1.1                # lib for group_list_view
+  shimmer: ^3.0.0                        # shimmer loading effect lib
+  date_picker_plus: ^4.2.0               # datepicker
+  signature: ^6.0.0                      # lib for signature
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+
+flutter:
+
+  uses-material-design: true

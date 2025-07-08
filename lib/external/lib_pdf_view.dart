@@ -1,0 +1,1 @@
+export 'package:easy_pdf_viewer/easy_pdf_viewer.dart';
