@@ -1,4 +1,4 @@
-import 'package:wtoolbox/entity/wtoolbox_entity.dart';
+import 'package:wtoolbox/clean_architecture/entity/wtoolbox_entity.dart';
 
 class Message extends WTEntity<Message> {
 

@@ -3,10 +3,10 @@ import 'package:wtoolbox/logger/wtoolbox_logger.dart';
 import 'package:wtoolbox/entity/message/message.dart';
 import '../message_out_repository.dart';
 
-class HiveMessageOutRepository extends MessageOutRepository {
+class MessageOutRepositoryHive extends MessageOutRepository {
 
   Box? dbBox;
-  final String dbCollectionName = 'wt_mesage_out_collection';
+  final String dbCollectionName = 'wtoolbox_mesage_out_collection';
 
   @override
   Future<bool> init(int? accountKey) async {
@@ -15,7 +15,7 @@ class HiveMessageOutRepository extends MessageOutRepository {
     return await Hive
       .openBox(dbBoxName)
       .then((v) {
-        WTLogger.write('HiveMessageOutRepository.openBox(name: ${v.name}, isOpen: ${v.isOpen})');
+        WTLogger.write('MessageOutRepositoryHive.init(name: ${v.name}, isOpen: ${v.isOpen})');
         if(!v.isOpen) { return false; }
         dbBox = v;
         return true;
@@ -28,7 +28,7 @@ class HiveMessageOutRepository extends MessageOutRepository {
       await dbBox!
         .close()
         .then((v) async {
-          WTLogger.write('HiveMessageOutRepository.closeBox(name: ${dbBox!.name}, isOpen: ${dbBox!.isOpen})');
+          WTLogger.write('MessageOutRepositoryHive.close(name: ${dbBox!.name}, isOpen: ${dbBox!.isOpen})');
           dbBox = null;
         });
     }

@@ -3,11 +3,11 @@ import 'package:wtoolbox/external/lib_getx.dart';
 import 'package:wtoolbox/external/lib_uuid.dart';
 import 'package:wtoolbox/logger/wtoolbox_logger.dart';
 import 'package:wtoolbox/socket/wtoolbox_socket.dart';
+import '../wtoolbox_notifier.dart';
+import '../wtoolbox_notifier_service.dart';
 import 'package:wtoolbox/entity/message/message.dart';
 import 'package:wtoolbox/repository/message/message_in/message_in_repository.dart';
 import 'package:wtoolbox/repository/message/message_out/message_out_repository.dart';
-import '../wtoolbox_notifier_service.dart';
-import '../wtoolbox_notifier.dart';
 
 class WTNotifierServiceImpl extends WTNotifierService {
 
@@ -84,7 +84,7 @@ class WTNotifierServiceImpl extends WTNotifierService {
         ..setBody(jsonEncode(body));
 
       bool? created = await Get.find<MessageInRepository>().insert(m);
-      if(created) { notifySubscriber({ 'message': m }); }
+      if(created!) { notifySubscriber({ 'message': m }); }
     }
   }
 

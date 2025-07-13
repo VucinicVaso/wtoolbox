@@ -1,4 +1,4 @@
-import 'package:wtoolbox/repository/wtoolbox_repository.dart';
+import 'package:wtoolbox/clean_architecture/repository/wtoolbox_repository.dart';
 import 'package:wtoolbox/entity/message/message.dart';
 
 abstract class MessageOutRepository extends WTRepository<Message> {

@@ -3,10 +3,10 @@ import 'package:wtoolbox/logger/wtoolbox_logger.dart';
 import 'package:wtoolbox/entity/account/account.dart';
 import '../account_repository.dart';
 
-class HiveAccountRepository extends AccountRepository {
+class AccountRepositoryHive extends AccountRepository {
 
   Box? dbBox;
-  final String dbCollectionName = 'wt_account_collection';
+  final String dbCollectionName = 'wtoolbox_account_collection';
 
   @override
   Future<bool> init(int? accountKey) async {
@@ -15,7 +15,7 @@ class HiveAccountRepository extends AccountRepository {
     return Hive
       .openBox(dbBoxName)
       .then((v) {
-        WTLogger.write('HiveAccountRepository.openBox(name: ${v.name}, isOpen: ${v.isOpen})');
+        WTLogger.write('AccountRepositoryHive.init(name: ${v.name}, isOpen: ${v.isOpen})');
         if(!v.isOpen) { return false; }
         dbBox = v;
         return true;
@@ -28,7 +28,7 @@ class HiveAccountRepository extends AccountRepository {
       await dbBox!
         .close()
         .then((v) {
-          WTLogger.write('HiveAccountRepository.closeBox(name: ${dbBox!.name}, isOpen: ${dbBox!.isOpen})');
+          WTLogger.write('AccountRepositoryHive.close(name: ${dbBox!.name}, isOpen: ${dbBox!.isOpen})');
           dbBox = null;
         });
     }

@@ -1,4 +1,4 @@
-import '../wtoolbox_entity.dart';
+import 'package:wtoolbox/clean_architecture/entity/wtoolbox_entity.dart';
 
 enum AccountEntitySecurityOption {
   pin,
