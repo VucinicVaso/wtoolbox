@@ -98,8 +98,6 @@ class WTSocketImpl extends WTSocket {
       headers: clientHeaders, 
       callback: (f) async => await receive(f)
     );
-
-    await Get.find<WTNotifierService>().checkForUnSendMessages();
   }
 
   @override

@@ -34,16 +34,18 @@ class WTNotifierServiceImpl extends WTNotifierService {
   }
 
   @override
-  Future<void> checkForUnSendMessages() async {
-    List<Message> list = await Get.find<MessageOutRepository>().getAll();
+  Future<void> sendPending(List<Map<String, dynamic>>? messages) async {
+    if(messages!.isEmpty) {
+      WTLogger.write('WTNotifierService.sendPending() 0 messages to send.');
+    }
 
-    if(list.isNotEmpty) {
+    if(messages.isNotEmpty) {
       if(Get.find<WTSocket>().connected == false) {
-        WTLogger.write('WTNotifierService.checkForUnSendMessages() error: Internet connection error.');
+        WTLogger.write('WTNotifierService.sendPending() error: Internet connection error.');
       }
       if(Get.find<WTSocket>().connected == true) {
-        for(Message m in list) {
-          Get.find<WTSocket>().send(headers: m.headers, body: m.body);
+        for(var m in messages) {
+          Get.find<WTSocket>().send(headers: m['headers'], body: m['body']);
         }
       }
     }

@@ -8,4 +8,7 @@ abstract class WTNotifier {
   // notify notifer when notifer receives new message
   void notify(Map<String, dynamic>? message);
 
+  // send unsend messages
+  Future<void> sendPending();
+
 }

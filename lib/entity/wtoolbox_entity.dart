@@ -1,7 +1,7 @@
 abstract class WTEntity<T> {
-  
+
   WTEntity({
-    this.key, 
+    this.key,
     this.date
   });
 
@@ -16,4 +16,5 @@ abstract class WTEntity<T> {
   T? fromJson(Map<dynamic, dynamic>? json);
 
   T? empty();
+
 }
