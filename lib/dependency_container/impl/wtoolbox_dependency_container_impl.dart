@@ -30,8 +30,8 @@ import 'package:wtoolbox/http_adapter/wtoolbox_http_adapter.dart';
 import 'package:wtoolbox/http_adapter/impl/wtoolbox_http_adapter_impl.dart';
 import 'package:wtoolbox/theme/wtoolbox_theme_catalog.dart';
 import 'package:wtoolbox/theme/impl/wtoolbox_theme_service_impl.dart';
-import 'package:wtoolbox/component_factory/factory/wtoolbox_component_factory.dart';
-import 'package:wtoolbox/component_factory/factory/impl1/wtoolbox_component_factory_service_impl1.dart';
+import 'package:wtoolbox/widget_factory/factory/wtoolbox_widget_factory.dart';
+import 'package:wtoolbox/widget_factory/factory/impl1/wtoolbox_widget_factory_impl1.dart';
 import '../wtoolbox_dependency_container.dart';
 
 class WTDependencyContainerImpl extends WTDependencyContainer {
@@ -56,9 +56,9 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTTranslation>(WTTranslationImpl());
     Get.put<WTThemeCatalog>(WTThemeCatalogImpl());
 
-    WTComponentFactory? componentFactory1 = WTComponentFactoryImpl1()
+    WTWidgetFactory? widgetFactory1 = WTWidgetFactoryImpl1()
       ..setTheme(Get.find<WTThemeCatalog>().themeExtension!);
-    Get.put<WTComponentFactory>(componentFactory1);
+    Get.put<WTWidgetFactory>(widgetFactory1);
   }
 
   @override
@@ -70,7 +70,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     await Get.delete<WTThemeCatalog>(force: true);
     await Get.delete<WTRouter>(force: true);
     await Get.delete<WTApplicationStarterService>(force: true);
-    await Get.delete<WTComponentFactory>(force: true);
+    await Get.delete<WTWidgetFactory>(force: true);
     await Get.delete<WTOAuth2>(force: true);
     await Get.delete<WTBiometrics>(force: true);
     await Get.delete<WTApplicationLifecycle>(force: true);
