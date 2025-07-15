@@ -6,17 +6,17 @@ import 'package:wtoolbox/widget_factory/factory/wtoolbox_widget_factory.dart';
 abstract class WTView<T> extends StatelessWidget {
 
   WTView({ super.key }) {
-    setComponentFactory();
+    initWidgetBuilder();
   }
 
   T? controller;
   void setController(T? wtController) { controller = wtController; }
 
-  WTWidgetFactory? widgetFactory;
-  void setComponentFactory() {
-    widgetFactory = Get.find<WTWidgetFactory>()..initialize();
-    if(widgetFactory!.isInitialized!) {
-      widgetFactory!
+  WTWidgetFactory? widgetBuilder;
+  void initWidgetBuilder() {
+    widgetBuilder = Get.find<WTWidgetFactory>()..initialize();
+    if(widgetBuilder!.isInitialized!) {
+      widgetBuilder!
         ..setDeviceWidth(Get.width)
         ..setDeviceHeight(Get.height);
     }
