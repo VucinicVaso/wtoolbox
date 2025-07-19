@@ -23,7 +23,7 @@ class WTApplicationLifecycleImpl extends WTApplicationLifecycle {
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) async {
+  void didAppLifecycleStateChanged(AppLifecycleState state) async {
     if(state == AppLifecycleState.paused) { await paused(); }
 
     if(state == AppLifecycleState.resumed) { await resumed(); }

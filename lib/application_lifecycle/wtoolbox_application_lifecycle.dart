@@ -16,7 +16,7 @@ abstract class WTApplicationLifecycle {
   Function? redirectAction;
   void setRedirectAction(Function? v) { redirectAction = v; }
 
-  void didChangeAppLifecycleState(AppLifecycleState state);
+  void didAppLifecycleStateChanged(AppLifecycleState state);
 
   Future<void> resumed();
   Future<void> paused();

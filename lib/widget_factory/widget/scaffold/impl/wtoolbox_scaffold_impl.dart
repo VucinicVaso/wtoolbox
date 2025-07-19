@@ -66,7 +66,7 @@ class _ComponentWidgetState extends State<ComponentWidget> with WidgetsBindingOb
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    Get.find<WTApplicationLifecycle>().didChangeAppLifecycleState(state);
+    Get.find<WTApplicationLifecycle>().didAppLifecycleStateChanged(state);
   }
 
   @override
