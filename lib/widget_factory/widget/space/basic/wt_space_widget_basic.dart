@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../wtoolbox_space_widget.dart';
+import '../wt_space_widget.dart';
 
 class WTSpaceWidgetBasic extends WTSpaceWidget {
 

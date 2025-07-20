@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_svg.dart';
-import '../wtoolbox_header.dart';
+import '../wt_header.dart';
 
 class WTHeaderImpl extends WTHeader {
 

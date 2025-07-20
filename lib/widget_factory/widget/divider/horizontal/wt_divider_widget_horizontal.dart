@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../wtoolbox_divider_widget.dart';
+import '../wt_divider_widget.dart';
 
 class WTDividerWidgetHorizontal extends WTDividerWidget {
 

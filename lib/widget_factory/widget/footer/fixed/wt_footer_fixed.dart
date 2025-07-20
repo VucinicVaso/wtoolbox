@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../wtoolbox_footer.dart';
+import '../wt_footer.dart';
 
 class WTFooterFixed extends WTFooter {
 

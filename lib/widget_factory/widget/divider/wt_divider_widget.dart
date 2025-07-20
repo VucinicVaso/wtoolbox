@@ -1,4 +1,4 @@
-import '../wtoolbox_widget.dart';
+import '../wt_widget.dart';
 
 abstract class WTDividerWidget extends WTWidget {
 

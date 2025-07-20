@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../wtoolbox_empty_widget.dart';
+import '../wt_empty_widget.dart';
 
 class WTEmptyWidgetImpl extends WTEmptyWidget {
 

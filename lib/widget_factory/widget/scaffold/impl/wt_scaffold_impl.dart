@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
 import 'package:wtoolbox/application_lifecycle/wtoolbox_application_lifecycle.dart';
-import '../wtoolbox_scaffold.dart';
+import '../wt_scaffold.dart';
 
 class WTScaffoldImpl extends WTScaffold {
 

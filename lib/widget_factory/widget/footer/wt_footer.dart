@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../wtoolbox_widget.dart';
+import '../wt_widget.dart';
 
 abstract class WTFooter extends WTWidget {
 
