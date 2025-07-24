@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import '../wt_widget.dart';
+import '../header/wt_header.dart';
+import '../body/wt_body.dart';
+import '../floating_menu/wt_floating_menu.dart';
+import '../footer/wt_footer.dart';
 
 abstract class WTScaffold extends WTWidget {
 
@@ -12,16 +16,16 @@ abstract class WTScaffold extends WTWidget {
   bool? unfocused = false;
   void isUnfocused(bool? v) { unfocused = v; }
 
-  PreferredSizeWidget? header;
-  void setHeader(PreferredSizeWidget? v) { header = v; }
+  WTHeader? header;
+  void setHeader(WTHeader? v) { header = v; }
 
-  Widget? body;
-  void setBody(Widget? v) { body = v; }
+  WTBody? body;
+  void setBody(WTBody? v) { body = v; }
 
-  Widget? flyMenu;
-  void setFlyMenu(Widget? v) { flyMenu = v; }
+  WTFloatingMenu? floatingMenu;
+  void setFlyMenu(WTFloatingMenu? v) { floatingMenu = v; }
 
-  Widget? footer;
-  void setFooter(Widget? v) { footer = v; }
+  WTFooter? footer;
+  void setFooter(WTFooter? v) { footer = v; }
 
 }

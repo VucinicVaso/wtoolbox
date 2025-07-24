@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
 import '../wt_widget.dart';
 
 abstract class WTBody extends WTWidget {
 
-  List<Widget>? widgets = List<Widget>.empty(growable: true);
-  void addWidget(Widget? v) { widgets!.add(v!); }
-  void addWidgets(List<Widget>? v) { widgets!.addAll(v!); }
+  List<WTWidget>? widgets = List<WTWidget>.empty(growable: true);
+  void addWidget(WTWidget? v) { widgets!.add(v!); }
+  void addWidgets(List<WTWidget>? v) { widgets!.addAll(v!); }
 
 }

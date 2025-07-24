@@ -87,4 +87,4 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
 
 }
 
-WTDependencyContainer? dependecyContainer = WTDependencyContainerImpl();
+WTDependencyContainer? dependencyContainer = WTDependencyContainerImpl();

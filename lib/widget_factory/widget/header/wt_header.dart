@@ -6,17 +6,31 @@ abstract class WTHeader {
 
   UniqueKey? getUniqueKey() { return UniqueKey(); }
 
+  double? width;
+  void setWidth(double? v) { width = v; }
+
   BuildContext? buildContext;
   void setBuildContext(BuildContext? v) { buildContext = v; }
 
-  double? width;
-  void setWidth(double? v) { width = v; }
+  String? googleFonts = '';
+  void setGoogleFonts(String? v) { if(v != null || v != '') { googleFonts = v; } }
 
   Color? backgroundColor;
   void setBackgroundColor(Color? v) { backgroundColor = v; }
 
   bool? shadow = false;
   void withShadow(bool? v) { shadow = v; }
+
+  bool? sidebar = false;
+  IconData? sidebarIcon;
+  Color? sidebarIconColor;
+  double? sidebarIconSize;
+  VoidCallback? sidebarAction;
+  void withSidebar() { sidebar = true; }
+  void setSidebarIcon(IconData? v) { sidebarIcon = v; }
+  void setSidebarIconColor(Color? v) { sidebarIconColor = v; }
+  void setSidebarIconSize(double? v) { sidebarIconSize = v; }
+  void setSidebarAction(VoidCallback? v) { sidebarAction = v; }
 
   VoidCallback? backAction;
 
@@ -41,12 +55,6 @@ abstract class WTHeader {
   void setBackActionLabelSize(double? v) { backActionLabelSize = v; }
   void setBackActionLabelColor(Color? v) { backActionLabelColor = v; }
 
-  String? backActionLinkLabel;
-  double? backActionLinkLabelSize;
-  Color? backActionLinkLabelColor;
-  void setBackActionLinkLabelSize(double? v) { backActionLinkLabelSize = v!; }
-  void setBackActionLinkLabelColor(Color? v) { backActionLinkLabelColor = v; }
-
   void setBackAction({
     VoidCallback? action,
     IconData? icon,
@@ -59,7 +67,6 @@ abstract class WTHeader {
     String? svgNetwork, 
     String? svgAsset,
     String? label,
-    String? linkLabel,
   }) { 
     backAction             = action; 
     backActionIcon         = icon;
@@ -72,7 +79,6 @@ abstract class WTHeader {
     backActionSvgNetwork   = svgNetwork;
     backActionSvgAsset     = svgAsset;
     backActionLabel        = label;
-    backActionLinkLabel    = linkLabel;
   }
 
   String? label;
@@ -82,21 +88,18 @@ abstract class WTHeader {
   void setLabelSize(double? v) { labelSize = v; }
   void setLabelColor(Color? v) { labelColor = v; }
 
-  double? actionIconSize, actionLabelSize, actionLinkLabelSize;
-  Color? actionIconColor, actionIconBackgroundColor, actionLabelColor, actionLinkLabelColor;
+  double? actionIconSize, actionLabelSize;
+  Color? actionIconColor, actionIconBackgroundColor, actionLabelColor;
   void setActionIconSize(double? v) { actionIconSize = v; }
   void setActionIconColor(Color? v) { actionIconColor = v; }
   void setActionIconBackgroundColor(Color? v) { actionIconBackgroundColor = v; }
   void setActionLabelSize(double? v) { actionLabelSize = v; }
   void setActionLabelColor(Color? v) { actionLabelColor = v; }
-  void setActionLinkLabelSize(double? v) { actionLinkLabelSize = v; }
-  void setActionLinkLabelColor(Color? v) { actionLinkLabelColor = v; }
   List<Map>? actions = List<Map>.empty(growable: true);
   void addAction({
     VoidCallback? action,
     IconData? icon,
     String? label,
-    String? linkLabel,
     String? networkImage,
     String? assetImage,
     Uint8List? memoryImage
@@ -107,8 +110,7 @@ abstract class WTHeader {
       'label':        label,
       'networkImage': networkImage,
       'assetImage':   assetImage,
-      'memoryImage':  memoryImage,
-      'linkLabel':    linkLabel,
+      'memoryImage':  memoryImage
     });
   }
 
@@ -134,10 +136,10 @@ abstract class WTHeader {
     menuItems!.add({
       'action':       action,
       'icon':         icon,
+      'label':        label,
       'networkImage': networkImage,
       'assetImage':   assetImage,
-      'memoryImage':  memoryImage,
-      'label':        label,
+      'memoryImage':  memoryImage
     });
   }
 

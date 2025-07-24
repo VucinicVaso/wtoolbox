@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_material_symbols.dart';
 import '../wtoolbox_widget_factory.dart';
 import '../../type/impl1/wtoolbox_widget_type.dart';
-import '../../widget/empty/wt_empty_widget.dart';
-import '../../widget/empty/impl/wt_empty_widget_impl.dart';
-import '../../widget/divider/wt_divider_widget.dart';
-import '../../widget/divider/horizontal/wt_divider_widget_horizontal.dart';
+import '../../widget/empty/wt_empty.dart';
+import '../../widget/empty/impl/wt_empty_impl.dart';
+import '../../widget/divider/wt_divider.dart';
+import '../../widget/divider/horizontal/wt_divider_horizontal.dart';
 import '../../widget/layout/wt_layout.dart';
 import '../../widget/layout/horizontal/wt_layout_horizontal.dart';
 import '../../widget/layout/vertical/wt_layout_vertical.dart';
@@ -20,8 +20,8 @@ import '../../widget/body/wt_body.dart';
 import '../../widget/body/impl/wt_body_impl.dart';
 import '../../widget/footer/wt_footer.dart';
 import '../../widget/footer/fixed/wt_footer_fixed.dart';
-import '../../widget/space/wt_space_widget.dart';
-import '../../widget/space/basic/wt_space_widget_basic.dart';
+import '../../widget/space/wt_space.dart';
+import '../../widget/space/basic/wt_space_basic.dart';
 
 class WTWidgetFactoryImpl1 extends WTWidgetFactory {
 
@@ -62,17 +62,14 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
         var component = WTHeaderImpl()
           ..setBuildContext(getCurrentContext())
           ..withShadow(false)
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background1)
           ..setBackActionIconColor(theme!.text1)
           ..setBackActionLabelColor(theme!.text1)
-          ..setBackActionLinkLabelColor(theme!.primary1)
           ..setBackActionSvgBackgroundColor(theme!.background2)
           ..setLabelColor(theme!.text1)
           ..setActionIconColor(theme!.text1)
           ..setActionIconBackgroundColor(theme!.background1)
           ..setActionLabelColor(theme!.text1)
-          ..setActionLinkLabelColor(theme!.primary1)
           ..setMenuIcon(Symbols.more_vert_rounded)
           ..setMenuIconColor(theme!.text1)
           ..setMenuBackgroundColor(theme!.background2)
@@ -83,17 +80,14 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
         var component = WTHeaderImpl()
           ..setBuildContext(getCurrentContext())
           ..withShadow(true)
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background1)
           ..setBackActionIconColor(theme!.text1)
           ..setBackActionLabelColor(theme!.text1)
-          ..setBackActionLinkLabelColor(theme!.primary1)
           ..setBackActionSvgBackgroundColor(theme!.background2)
           ..setLabelColor(theme!.text1)
           ..setActionIconColor(theme!.text1)
           ..setActionIconBackgroundColor(theme!.background1)
           ..setActionLabelColor(theme!.text1)
-          ..setActionLinkLabelColor(theme!.primary1)
           ..setMenuIcon(Symbols.more_vert_rounded)
           ..setMenuIconColor(theme!.text1)
           ..setMenuBackgroundColor(theme!.background2)
@@ -104,17 +98,14 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
         var component = WTHeaderImpl()
           ..setBuildContext(getCurrentContext())
           ..withShadow(false)
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background2)
           ..setBackActionIconColor(theme!.text1)
           ..setBackActionLabelColor(theme!.text1)
-          ..setBackActionLinkLabelColor(theme!.primary1)
           ..setBackActionSvgBackgroundColor(theme!.background1)
           ..setLabelColor(theme!.text1)
           ..setActionIconColor(theme!.text1)
           ..setActionIconBackgroundColor(theme!.background1)
           ..setActionLabelColor(theme!.text1)
-          ..setActionLinkLabelColor(theme!.primary1)
           ..setMenuIcon(Symbols.more_vert_rounded)
           ..setMenuIconColor(theme!.text1)
           ..setMenuBackgroundColor(theme!.background1)
@@ -125,17 +116,14 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
         var component = WTHeaderImpl()
           ..setBuildContext(getCurrentContext())
           ..withShadow(true)
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background2)
           ..setBackActionIconColor(theme!.text1)
           ..setBackActionLabelColor(theme!.text1)
-          ..setBackActionLinkLabelColor(theme!.primary1)
           ..setBackActionSvgBackgroundColor(theme!.background1)
           ..setLabelColor(theme!.text1)
           ..setActionIconColor(theme!.text1)
           ..setActionIconBackgroundColor(theme!.background1)
           ..setActionLabelColor(theme!.text1)
-          ..setActionLinkLabelColor(theme!.primary1)
           ..setMenuIcon(Symbols.more_vert_rounded)
           ..setMenuIconColor(theme!.text1)
           ..setMenuBackgroundColor(theme!.background1)
@@ -151,16 +139,12 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTBodyType.basic1:
         var component = WTBodyImpl()
           ..setBuildContext(getCurrentContext())
-          ..setBackgroundColor(theme!.background1)
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!);
+          ..setBackgroundColor(theme!.background1);
         return component;
       case WTBodyType.basic2:
         var component = WTBodyImpl()
           ..setBuildContext(getCurrentContext())
-          ..setBackgroundColor(theme!.background2)
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!);
+          ..setBackgroundColor(theme!.background2);
         return component;
     }
   }
@@ -171,7 +155,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTFooterType.basic1Fixed:
         var component = WTFooterFixed()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background1)
           ..setSelectedItemBackgroundColor(theme!.primary4)
           ..setSelectedItemIconColor(theme!.primary1)
@@ -183,7 +166,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTFooterType.basic2Fixed:
         var component = WTFooterFixed()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
           ..setBackgroundColor(theme!.background2)
           ..setSelectedItemBackgroundColor(theme!.primary4)
           ..setSelectedItemIconColor(theme!.primary1)
@@ -201,8 +183,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.horizontal:
         var component = WTLayoutHorizontal()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -213,8 +193,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.horizontalFlat:
         var component = WTLayoutHorizontal()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setAlignment(null)
           ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -225,8 +203,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.vertical:
         var component = WTLayoutVertical()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -237,8 +213,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalFlat:
         var component = WTLayoutVertical()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setAlignment(null)
           ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -249,8 +223,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalScrollable:
         var component = WTLayoutVerticalScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setScrollable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
@@ -262,8 +234,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalFlatScrollable:
         var component = WTLayoutVerticalScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setScrollable()
           ..setAlignment(null)
           ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -275,8 +245,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalExpanded:
         var component = WTLayoutVerticalExpanded()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setExpandable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
@@ -288,8 +256,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalFlatExpanded:
         var component = WTLayoutVerticalExpanded()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setExpandable()
           ..setAlignment(null)
           ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -301,8 +267,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalExpandedAndScrollable:
         var component = WTLayoutVerticalExpandedAndScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setExpandable()
           ..setScrollable()
           ..setAlignment(null)
@@ -315,8 +279,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalFlatExpandedAndScrollable:
         var component = WTLayoutVerticalExpandedAndScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setWidth(deviceWidth!)
-          ..setHeight(deviceHeight!)
           ..setExpandable()
           ..setScrollable()
           ..setAlignment(null)
@@ -330,19 +292,19 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
   }
 
   @override
-  WTEmptyWidget? createEmptyWidget(WTEmptyType type) {
+  WTEmpty? createEmpty(WTEmptyType type) {
     switch(type) {
       case WTEmptyType.empty:
-        var component = WTEmptyWidgetImpl();
+        var component = WTEmptyImpl();
         return component;
     }
   }
 
   @override
-  WTDividerWidget? createDividerWidget(WTDividerType type) {
+  WTDivider? createDivider(WTDividerType type) {
     switch(type) {
       case WTDividerType.horizontal:
-        var component = WTDividerWidgetHorizontal()
+        var component = WTDividerHorizontal()
           ..setBuildContext(getCurrentContext())
           ..setBackgroundColor(theme!.shade5)
           ..setThickness(1.0);
@@ -351,40 +313,40 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
   }
 
   @override
-  WTSpaceWidget? createSpaceWidget(WTSpaceType type) {
+  WTSpace? createSpace(WTSpaceType type) {
     switch(type) {
       case WTSpaceType.horizontal5:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(0.0)
           ..setWidth(5.0);
         return component;
       case WTSpaceType.horizontal10:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(0.0)
           ..setWidth(10.0);
         return component;
       case WTSpaceType.horizontal15:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(0.0)
           ..setWidth(15.0);
         return component;
       case WTSpaceType.vertical5:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(5.0)
           ..setWidth(0.0);
         return component;
       case WTSpaceType.vertical10:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(10.0)
           ..setWidth(0.0);
         return component;
       case WTSpaceType.vertical15:
-        var component = WTSpaceWidgetBasic()
+        var component = WTSpaceBasic()
           ..setBuildContext(getCurrentContext())
           ..setHeight(15.0)
           ..setWidth(0.0);

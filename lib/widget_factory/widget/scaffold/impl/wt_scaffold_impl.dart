@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
 import 'package:wtoolbox/application_lifecycle/wtoolbox_application_lifecycle.dart';
 import '../wt_scaffold.dart';
+import '../../header/wt_header.dart';
+import '../../body/wt_body.dart';
+import '../../floating_menu/wt_floating_menu.dart';
+import '../../footer/wt_footer.dart';
 
 class WTScaffoldImpl extends WTScaffold {
 
@@ -15,7 +19,7 @@ class WTScaffoldImpl extends WTScaffold {
       onSwipeAction:   onSwipeAction,
       header:          header,
       body:            body,
-      flyMenu:         flyMenu,
+      floatingMenu:    floatingMenu,
       footer:          footer,
     );
   }
@@ -28,8 +32,10 @@ class ComponentWidget extends StatefulWidget {
   GlobalKey? globalKey;
   bool? unfocused;
   Color? backgroundColor;
-  PreferredSizeWidget? header;
-  Widget? body, flyMenu, footer;
+  WTHeader? header;
+  WTBody? body;
+  WTFloatingMenu? floatingMenu;
+  WTFooter? footer;
   VoidCallback? onSwipeAction;
 
   ComponentWidget({
@@ -40,7 +46,7 @@ class ComponentWidget extends StatefulWidget {
     this.onSwipeAction,
     this.header,
     this.body,
-    this.flyMenu,
+    this.floatingMenu,
     this.footer,
   });
 
@@ -90,13 +96,25 @@ class _ComponentWidgetState extends State<ComponentWidget> with WidgetsBindingOb
           false;
         }
       },
-      child: Scaffold(
-        key: widget.globalKey,
-        backgroundColor: widget.backgroundColor,
-        appBar: widget.header,
-        body: widget.body,
-        floatingActionButton: widget.flyMenu,
-        bottomNavigationBar: widget.footer,
+      child: LayoutBuilder(
+        builder: (context, contraints) {
+          double? width  = contraints.maxWidth;
+          double? height = contraints.maxHeight;
+          
+          widget.header?.setWidth(width);
+          widget.body?..setWidth(width)..setHeight(height);
+          widget.floatingMenu?..setWidth(width)..setHeight(height);       
+          widget.footer?..setWidth(width)..setHeight(height);
+          
+          return Scaffold(
+            key: widget.globalKey,
+            backgroundColor: widget.backgroundColor,
+            appBar: widget.header?.build(),
+            body: widget.body?.build(),
+            floatingActionButton: widget.floatingMenu?.build(),
+            bottomNavigationBar: widget.footer?.build(),
+          );
+        }
       ),
     );
   }

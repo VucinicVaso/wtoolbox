@@ -16,27 +16,20 @@ class WTBodyImpl extends WTBody {
       key: getUniqueKey(),
       child: GestureDetector(
         onTap: () => isKeyboardOpen(),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            width  = constraints.maxWidth;
-            height = constraints.maxHeight;
-            
-            return Container(
-              color: backgroundColor,
-              width: width,
-              height: height,
-              child: SizedBox.expand(
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    ...widgets!,
-                  ],
-                ),
-              ),
-            );
-          }
+        child: Container(
+          color: backgroundColor,
+          width: width,
+          height: height,
+          child: SizedBox.expand(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                ...widgets!.map((w) => w.build()!),
+              ],
+            ),
+          ),
         ),
       ),
     );

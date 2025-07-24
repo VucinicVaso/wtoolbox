@@ -13,13 +13,6 @@ abstract class WTView<T> extends StatelessWidget {
   void setController(T? wtController) { controller = wtController; }
 
   WTWidgetFactory? widgetBuilder;
-  void initWidgetBuilder() {
-    widgetBuilder = Get.find<WTWidgetFactory>()..initialize();
-    if(widgetBuilder!.isInitialized!) {
-      widgetBuilder!
-        ..setDeviceWidth(Get.width)
-        ..setDeviceHeight(Get.height);
-    }
-  }
+  void initWidgetBuilder() { widgetBuilder = Get.find<WTWidgetFactory>(); }
 
 }

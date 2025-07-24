@@ -40,8 +40,8 @@ class WTFooterFixed extends WTFooter {
 
   @override
   Widget? build() {
-    itemIconSize  = width! * 0.060;
-    itemLabelSize = width! * 0.035;
+    itemIconSize  = 25;
+    itemLabelSize = 18;
 
     return BottomNavigationBar(
       key: getUniqueKey(),

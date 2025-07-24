@@ -5,9 +5,9 @@ import '../widget/header/wt_header.dart';
 import '../widget/body/wt_body.dart';
 import '../widget/footer/wt_footer.dart';
 import '../widget/layout/wt_layout.dart';
-import '../widget/empty/wt_empty_widget.dart';
-import '../widget/space/wt_space_widget.dart';
-import '../widget/divider/wt_divider_widget.dart';
+import '../widget/empty/wt_empty.dart';
+import '../widget/space/wt_space.dart';
+import '../widget/divider/wt_divider.dart';
 
 abstract class WTWidgetFactory with WTWidgetFactoryConfig {
 
@@ -21,10 +21,10 @@ abstract class WTWidgetFactory with WTWidgetFactoryConfig {
 
   WTLayout? createLayout(WTLayoutType type);
 
-  WTEmptyWidget? createEmptyWidget(WTEmptyType type);
+  WTEmpty? createEmpty(WTEmptyType type);
 
-  WTDividerWidget? createDividerWidget(WTDividerType type);
+  WTDivider? createDivider(WTDividerType type);
 
-  WTSpaceWidget? createSpaceWidget(WTSpaceType type);
+  WTSpace? createSpace(WTSpaceType type);
 
 }

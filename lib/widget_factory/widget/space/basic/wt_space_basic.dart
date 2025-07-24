@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../wt_space_widget.dart';
+import '../wt_space.dart';
 
-class WTSpaceWidgetBasic extends WTSpaceWidget {
+class WTSpaceBasic extends WTSpace {
 
   @override
   Widget? build() {
@@ -12,4 +12,3 @@ class WTSpaceWidgetBasic extends WTSpaceWidget {
   }
 
 }
-
