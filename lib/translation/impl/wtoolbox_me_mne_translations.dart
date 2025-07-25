@@ -48,7 +48,6 @@ class WTMeMneTranslations extends WTTranslations {
       "loading": "Učitavanje...",
       "reviewAll": "Pregledajte sve",
       "viewAll": "Pregledajte sve",
-      "emptyField": "Polje ''@value'' je prazno.",
       "routeNotFount": "Ruta nije pronađena.",
       "errorTitle": "Greška",
       "errorsTitle": "Greške",
@@ -72,7 +71,9 @@ class WTMeMneTranslations extends WTTranslations {
       "stompError1": "Nedostaje Auth token.",
       "stompError2": "Auth token nije validan.",
       "stompError3": "Nepoznata Websocket greška.",
+      "stompError4": "Greška pri povezivanju sa veb soketom.",
       // validation
+      "emptyValidator": "Polje ''@value'' je prazno.",
       "emptySpaceValidator": "''@value'' sadrži prazan prostor.",
       "emailValidator": "''@value'' nije validan email.",
       "emailValidator1": "Moguć unos slova, brojeva i znakova . + _",
@@ -82,6 +83,8 @@ class WTMeMneTranslations extends WTTranslations {
       "nonAlphanumericValidator": "''@value'' sadrži nealfanumeričke znakove.",
       "invalidValidator": "''@value'' nije validan.",
       "negativeValidator": "''@value'' ne smije biti negativna.",
+      "minLengthValidator": "''@key'' mora imati najmanje ''@value'' karaktera.",
+      "missingValidator": "''@key'' nedostaje ''@value''",
     },
   };
 

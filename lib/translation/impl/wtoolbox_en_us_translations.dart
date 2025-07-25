@@ -48,7 +48,6 @@ class WTEnUsTranslations extends WTTranslations {
       "loading": "Loading...",
       "reviewAll": "Review all",
       "viewAll": "View all",
-      "emptyField": "Field ''@value'' is empty.",
       "routeNotFount": "Route not found.",
       "errorTitle": "Error",
       "errorsTitle": "Errors",
@@ -71,8 +70,10 @@ class WTEnUsTranslations extends WTTranslations {
       // websocket errors
       "stompError1": "Auth token is missing.",
       "stompError2": "Auth token is invalid.",
-      "stompError3": "'Unknown Websocket error.",
+      "stompError3": "'Unknown Websocket connection error.",
+      "stompError4": "Websocket connection error.",
       // validation
+      "emptyValidator": "Field ''@value'' is empty.",
       "emptySpaceValidator": "''@value'' contains empty space.",
       "emailValidator": "''@value'' is not a valid email.",
       "emailValidator1": "It is possible to enter letters, numbers and characters . + _",
@@ -82,6 +83,8 @@ class WTEnUsTranslations extends WTTranslations {
       "nonAlphanumericValidator": "''@value'' contains non-alphanumeric characters.",
       "invalidValidator": "''@value'' is invalid.",
       "negativeValidator": "''@value'' must not be negative.",
+      "minLengthValidator": "''@key'' must be minimum ''@value'' characters long.",
+      "missingValidator": "''@key'' is missing ''@value''"
     },
   };
 
