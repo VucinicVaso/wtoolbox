@@ -3,13 +3,13 @@ import '../wtoolbox_encryption.dart';
 
 class WTEncryptionImpl extends WTEncryption {
 
-  WTEncryptionImpl() {
+  WTEncryptionImpl({ String? key }) {
+    setRawKey(key);
     initEncryption();
   }
 
   @override
   void initEncryption() {
-    setRawKey('aT9@!bV5#Xz1p*Ld3W&fQ8nRu%Ae7KmC');
     setEncryptKey(Key.fromUtf8(getRawKey()!));
     setIv(IV.fromLength(16));
     setEncrypter(Encrypter(AES(getEncryptKey()!)));

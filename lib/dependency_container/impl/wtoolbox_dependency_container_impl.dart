@@ -42,7 +42,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
 
     Get.put<WTDevice>(WTDeviceImpl());
     Get.put<WTDatabase>(WTHiveDatabase());
-    Get.put<WTEncryption>(WTEncryptionImpl());
+    Get.put<WTEncryption>(WTEncryptionImpl(key: dotenv.get('ENCRYPTION_KEY')));
     Get.put<WTApplicationStarterService>(WTApplicationStarterServiceImpl());
     Get.put<WTRouter>(WTRouterImpl());
     Get.put<WTNotifierService>(WTNotifierServiceImpl());
