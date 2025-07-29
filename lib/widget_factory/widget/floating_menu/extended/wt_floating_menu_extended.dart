@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import '../wt_floating_menu.dart';
 
 class WtFloatingMenuExdended extends WTFloatingMenu {
-  
+
+  void setSizes() {
+    iconSize  = 25; 
+    labelSize = 18;
+  }
 
   Widget? createIconWidget() {
     if(icon == null) { return SizedBox.shrink(); }
@@ -31,8 +35,7 @@ class WtFloatingMenuExdended extends WTFloatingMenu {
 
   @override
   Widget? build() {
-    iconSize  = 25; 
-    labelSize = 18;
+    setSizes();
 
     return FloatingActionButton.extended(
       heroTag: getUniqueKey(),

@@ -11,7 +11,7 @@ class WTScaffoldImpl extends WTScaffold {
 
   @override
   Widget? build() {
-    return ComponentWidget(
+    return ScaffoldWidget(
       key:             getUniqueKey(),
       globalKey:       globalKey,
       unfocused:       unfocused,
@@ -27,7 +27,7 @@ class WTScaffoldImpl extends WTScaffold {
 }
 
 // ignore: must_be_immutable
-class ComponentWidget extends StatefulWidget {
+class ScaffoldWidget extends StatefulWidget {
 
   GlobalKey? globalKey;
   bool? unfocused;
@@ -38,7 +38,7 @@ class ComponentWidget extends StatefulWidget {
   WTFooter? footer;
   VoidCallback? onSwipeAction;
 
-  ComponentWidget({
+  ScaffoldWidget({
     super.key,
     this.globalKey,
     this.unfocused,
@@ -51,11 +51,11 @@ class ComponentWidget extends StatefulWidget {
   });
 
   @override
-  State<ComponentWidget> createState() => _ComponentWidgetState();
+  State<ScaffoldWidget> createState() => _ScaffoldState();
 
 }
 
-class _ComponentWidgetState extends State<ComponentWidget> with WidgetsBindingObserver {
+class _ScaffoldState extends State<ScaffoldWidget> with WidgetsBindingObserver {
 
   @override
   void initState() {

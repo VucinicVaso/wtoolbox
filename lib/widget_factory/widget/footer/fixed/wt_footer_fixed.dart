@@ -3,6 +3,11 @@ import '../wt_footer.dart';
 
 class WTFooterFixed extends WTFooter {
 
+  void setSizes() {
+    itemIconSize  = 25;
+    itemLabelSize = 18;
+  }
+
   BottomNavigationBarItem? createBarItem(Map<dynamic, dynamic>? e) {
     return BottomNavigationBarItem(
       icon: Container(
@@ -40,8 +45,7 @@ class WTFooterFixed extends WTFooter {
 
   @override
   Widget? build() {
-    itemIconSize  = 25;
-    itemLabelSize = 18;
+    setSizes();
 
     return BottomNavigationBar(
       key: getUniqueKey(),

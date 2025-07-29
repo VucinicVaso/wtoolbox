@@ -8,7 +8,7 @@ class WTHeaderImpl extends WTHeader {
 
   @override
   PreferredSizeWidget? build() {
-    return ComponentWidget(
+    return HeaderWidget(
       key:                          getUniqueKey(),
       width:                        width,
       backgroundColor:              backgroundColor,
@@ -57,7 +57,7 @@ class WTHeaderImpl extends WTHeader {
 }
 
 // ignore: must_be_immutable
-class ComponentWidget extends StatefulWidget implements PreferredSizeWidget {
+class HeaderWidget extends StatefulWidget implements PreferredSizeWidget {
 
   double? width;
   bool? shadow;
@@ -96,7 +96,7 @@ class ComponentWidget extends StatefulWidget implements PreferredSizeWidget {
   double? menuIconSize, menuLabelSize;
   Color? menuIconColor, menuBackgroundColor, menuItemIconColor, menuItemLabelColor;
 
-  ComponentWidget({
+  HeaderWidget({
     super.key,
     this.width,
     this.backgroundColor,
@@ -143,14 +143,14 @@ class ComponentWidget extends StatefulWidget implements PreferredSizeWidget {
   });
 
   @override
-  State<ComponentWidget> createState() => _ComponentState();
+  State<HeaderWidget> createState() => _HeaderState();
 
   @override
   Size get preferredSize => const Size.fromHeight(50);
 
 }
 
-class _ComponentState extends State<ComponentWidget> {
+class _HeaderState extends State<HeaderWidget> {
 
   double? width, height;
   bool? shadow;

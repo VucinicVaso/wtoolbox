@@ -3,9 +3,13 @@ import '../wt_floating_menu.dart';
 
 class WtFloatingMenuBasic extends WTFloatingMenu {
   
+  void setSizes() {
+    iconSize = 25;  
+  }
+
   @override
   Widget? build() {
-    iconSize = 25; 
+    setSizes();
 
     return FloatingActionButton(
       heroTag: getUniqueKey(),

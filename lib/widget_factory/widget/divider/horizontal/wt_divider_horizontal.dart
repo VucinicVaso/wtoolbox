@@ -3,9 +3,13 @@ import '../wt_divider.dart';
 
 class WTDividerHorizontal extends WTDivider {
 
+  void setSizes() {
+    margin = margin ?? const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 5.0);
+  }
+
   @override
   Widget? build() {
-    margin = margin ?? const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 5.0);
+    setSizes();
 
     return Container(
       key: getUniqueKey(),
