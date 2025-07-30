@@ -24,8 +24,8 @@ class WTMessageBrokerServiceImpl extends WTMessageBrokerService {
   @override
   void notifyBroker(Map<String, dynamic>? message) async {
     if(brokers!.where((o) => o.getTitle() == message!['header']['application']).isNotEmpty) {
-      final notifier = brokers!.firstWhere((o) => o.getTitle() == message!['header']['application']);
-      notifier.notify(message);
+      final broker = brokers!.firstWhere((o) => o.getTitle() == message!['header']['application']);
+      broker.notify(message);
     }
   }
 
@@ -40,8 +40,9 @@ class WTMessageBrokerServiceImpl extends WTMessageBrokerService {
         WTLogger.write('WTMessageBrokerService.sendPending() error: WTSocket connection error.');
       }
       if(Get.find<WTSocket>().connected == true) {
+        var socket = Get.find<WTSocket>();
         for(var m in messages) {
-          Get.find<WTSocket>().send(headers: m['headers'], body: m['body']);
+          socket.send(headers: m['headers'], body: m['body']);
         }
       }
     }
@@ -51,7 +52,7 @@ class WTMessageBrokerServiceImpl extends WTMessageBrokerService {
   Future<void> send({ Map<String, String>? headers, Map<String, dynamic>? body }) async {
     Get.find<WTSocket>().connected == true
       ? Get.find<WTSocket>().send(headers: headers, body: jsonEncode(body))
-      : WTLogger.write('WTNotifierService.send() error: Internet connection error.');
+      : WTLogger.write('WTMessageBrokerService.send() error: WTSocket connection error.');
   }
 
   @override

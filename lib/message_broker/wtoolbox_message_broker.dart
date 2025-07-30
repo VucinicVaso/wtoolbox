@@ -1,11 +1,11 @@
 abstract class WTMessageBroker {
 
-  // notifier title
+  // broker title
   String? _title;
   void setTitle(String v) { _title = v; }
   String? getTitle() { return _title; }
 
-  // notify notifer when notifer receives new message
+  // notify broker when it receives new message
   void notify(Map<String, dynamic>? message);
 
   // send unsend messages

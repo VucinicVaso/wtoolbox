@@ -2,13 +2,13 @@ import 'wtoolbox_message_broker.dart';
 
 abstract class WTMessageBrokerService {
 
-  // list of notifiers
+  // list of brokers
   List<WTMessageBroker>? brokers = List<WTMessageBroker>.empty(growable: true);
 
-  // subscribe application broker
+  // subscribe application message broker
   void subscribe(WTMessageBroker? broker);
 
-  // unsubscribe message brokers
+  // unsubscribe application message broker
   void unsubscribe(String? title);
 
   // notify application message broker when it receives new message
@@ -22,4 +22,5 @@ abstract class WTMessageBrokerService {
 
   // receive message
   Future<void> receive({ Map<String, String>? headers, String? body });
+
 }
