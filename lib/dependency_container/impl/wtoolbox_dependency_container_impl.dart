@@ -4,8 +4,8 @@ import 'package:wtoolbox/encryption/wtoolbox_encryption.dart';
 import 'package:wtoolbox/encryption/impl/wtoolbox_encryption_impl.dart';
 import 'package:wtoolbox/device/wtoolbox_device.dart';
 import 'package:wtoolbox/device/impl/wtoolbox_device_impl.dart';
-import 'package:wtoolbox/notifier/wtoolbox_notifier_service.dart';
-import 'package:wtoolbox/notifier/impl/wtoolbox_notifier_service_impl.dart';
+import 'package:wtoolbox/message_broker/wtoolbox_message_broker_service.dart';
+import 'package:wtoolbox/message_broker/impl/wtoolbox_message_broker_service_impl.dart';
 import 'package:wtoolbox/database/wtoolbox_database.dart';
 import 'package:wtoolbox/database/impl/wtoolbox_hive_database.dart';
 import 'package:wtoolbox/application_starter/wtoolbox_application_starter_service.dart';
@@ -45,7 +45,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTEncryption>(WTEncryptionImpl(key: dotenv.get('ENCRYPTION_KEY')));
     Get.put<WTApplicationStarterService>(WTApplicationStarterServiceImpl());
     Get.put<WTRouter>(WTRouterImpl());
-    Get.put<WTNotifierService>(WTNotifierServiceImpl());
+    Get.put<WTMessageBrokerService>(WTMessageBrokerServiceImpl());
     Get.put<WTOAuth2>(WTOAuth2Impl());
     Get.put<WTApplicationLifecycle>(WTApplicationLifecycleImpl());
     Get.put<WTBiometrics>(WTBiometricsImpl());
@@ -65,7 +65,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
   Future<void> unregister() async {
     await Get.delete<WTDevice>(force: true);
     await Get.delete<WTEncryption>(force: true);
-    await Get.delete<WTNotifierService>(force: true);
+    await Get.delete<WTMessageBrokerService>(force: true);
     await Get.delete<WTTranslation>(force: true);
     await Get.delete<WTThemeCatalog>(force: true);
     await Get.delete<WTRouter>(force: true);

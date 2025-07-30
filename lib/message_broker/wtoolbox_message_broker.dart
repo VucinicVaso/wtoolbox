@@ -1,4 +1,4 @@
-abstract class WTNotifier {
+abstract class WTMessageBroker {
 
   // notifier title
   String? _title;

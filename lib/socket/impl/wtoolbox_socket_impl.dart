@@ -2,7 +2,7 @@ import 'package:wtoolbox/external/lib_getx.dart';
 import 'package:wtoolbox/external/lib_stomp.dart';
 import 'package:wtoolbox/external/lib_dotenv.dart';
 import 'package:wtoolbox/logger/wtoolbox_logger.dart';
-import 'package:wtoolbox/notifier/wtoolbox_notifier_service.dart';
+import 'package:wtoolbox/message_broker/wtoolbox_message_broker_service.dart';
 import '../wtoolbox_socket.dart';
 
 class WTSocketImpl extends WTSocket {
@@ -105,7 +105,7 @@ class WTSocketImpl extends WTSocket {
     Map<String, String> headers = sF.headers;
     String? body = String.fromCharCodes(sF.binaryBody!);
 
-    await Get.find<WTNotifierService>().receive(headers: headers, body: body);
+    await Get.find<WTMessageBrokerService>().receive(headers: headers, body: body);
   }
 
   @override
