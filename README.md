@@ -11,7 +11,7 @@ Framework for creating mobile applications. WToolbox includes the following serv
 - theme service
 - translation service
 - validator service
-- MVC support
+- message broker
 - clean architecture support
 
 
