@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
 import '../wtoolbox_theme.dart';
-import '../wtoolbox_theme_catalog.dart';
+import '../wtoolbox_theme_service.dart';
 import 'wtoolbox_theme_dark.dart';
 import 'wtoolbox_theme_light.dart';
 
-class WTThemeCatalogImpl extends WTThemeCatalog {
+class WTThemeServiceImpl extends WTThemeService {
 
-  WTThemeCatalogImpl() {
+  WTThemeServiceImpl() {
     setLightTheme(WTThemeLight());
     setDarkTheme(WTThemeDark());
     useLightTheme();

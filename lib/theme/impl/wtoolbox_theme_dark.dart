@@ -5,7 +5,7 @@ import '../wtoolbox_theme_extension.dart';
 class WTThemeDark extends WTTheme {
 
   WTThemeDark() {
-    setName('Dark');
+    setName('dark');
     setTheme();
   }
 
@@ -17,38 +17,33 @@ class WTThemeDark extends WTTheme {
   @override
   void setTheme() {
     themeExtension = WTThemeExtension(
-      background1: const Color(0xFF223248),
-      background2: const Color(0xFF2b3d52),
-      text1: const Color(0xFFf5f9ff),
-      text2: const Color(0xFFd7e0ec),
-      text3: const Color(0xFFa0b0c4),
-      text4: const Color(0xFF7588a0),
-      text5: const Color(0xFF53667f),
-      primary1: const Color(0xFF0e6ce9),
-      primary2: const Color(0xFF8fbdf9),
-      primary3: const Color(0xFF5585c1),
-      primary4: const Color(0xFF223d5e),
-      primary5: const Color(0xFFffffff),
-      error1: const Color(0xFFe1231a),
-      error2: const Color(0xFFff9e99),
-      error3: const Color(0xFF834950),
-      error4: const Color(0xFF3e394a),
-      error5: const Color(0xFFffffff),
-      success1: const Color(0xFF148444),
-      success2: const Color(0xFF0fd965),
-      success3: const Color(0xFF1a945c),
-      success4: const Color(0xFF20464c),
-      success5: const Color(0xFFffffff),
+      background1: const Color(0xFF1E1E1E),
+      background2: const Color(0xFF2A2A2A),
+      text1: const Color(0xFFFFFFFF),
+      text2: const Color(0xFFE0E0E0),
+      text3: const Color(0xFFBDBDBD),
+      text4: const Color(0xFF9E9E9E),
+      text5: const Color(0xFF757575),
+      primary1: const Color(0xFF0B3C61),
+      primary2: const Color(0xFF115293),
+      primary3: const Color(0xFF1976D2),
+      primary4: const Color(0xFF90CAF9),
+      primary5: const Color(0xFFE3F2FF),
+      error1: const Color(0xFF7F1009),
+      error2: const Color(0xFFB2160D),
+      error3: const Color(0xFFE21D11),
+      error4: const Color(0xFFFFB8B2),
+      error5: const Color(0xFFFFE5E3),
+      success1: const Color(0xFF103915),
+      success2: const Color(0xFF1B5E20),
+      success3: const Color(0xFF2E7D32),
+      success4: const Color(0xFFA5D6A7),
+      success5: const Color(0xFFE3F9E5),
       shade1: const Color(0xFFf5f9ff),
       shade2: const Color(0xFFd7e0ec),
       shade3: const Color(0xFFa0b0c4),
       shade4: const Color(0xFF626d7c),
       shade5: const Color(0xFF8799af),
-      shade6: const Color(0xFF7588a0),
-      shade7: const Color(0xFF63778f),
-      shade8: const Color(0xFF53667f),
-      shade9: const Color(0xFF44566e),
-      shade10: const Color(0xFF36485f),
     );
   }
   @override

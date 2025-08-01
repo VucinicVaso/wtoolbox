@@ -7,7 +7,7 @@ enum WTThemeEnums {
   dark
 }
 
-abstract class WTThemeCatalog {
+abstract class WTThemeService {
 
   WTTheme? lightTheme;
   void setLightTheme(WTTheme? wtTheme);

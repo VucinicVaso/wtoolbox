@@ -31,19 +31,14 @@ class WTThemeExtension extends ThemeExtension<WTThemeExtension> {
     this.shade3,
     this.shade4,
     this.shade5,
-    this.shade6,
-    this.shade7,
-    this.shade8,
-    this.shade9,
-    this.shade10,
   });
 
   Color? background1, background2,
-         text1, text2, text3, text4, text5,
-         primary1, primary2, primary3, primary4, primary5,
-         error1, error2, error3, error4, error5,
-         success1, success2, success3, success4, success5,
-         shade1, shade2, shade3, shade4, shade5, shade6, shade7, shade8, shade9, shade10;
+    text1, text2, text3, text4, text5,
+    primary1, primary2, primary3, primary4, primary5,
+    error1, error2, error3, error4, error5,
+    success1, success2, success3, success4, success5,
+    shade1, shade2, shade3, shade4, shade5;
 
   @override
   ThemeExtension<WTThemeExtension> copyWith({
@@ -74,12 +69,6 @@ class WTThemeExtension extends ThemeExtension<WTThemeExtension> {
     Color? shade3,
     Color? shade4,
     Color? shade5,
-    Color? shade6,
-    Color? shade7,
-    Color? shade8,
-    Color? shade9,
-    Color? shade10,
-    Color? shade11,
   }) {
     return WTThemeExtension(
       background1: background1 ?? this.background1,
@@ -109,11 +98,6 @@ class WTThemeExtension extends ThemeExtension<WTThemeExtension> {
       shade3: shade3 ?? this.shade3,
       shade4: shade4 ?? this.shade4,
       shade5: shade5 ?? this.shade5,
-      shade6: shade6 ?? this.shade6,
-      shade7: shade7 ?? this.shade7,
-      shade8: shade8 ?? this.shade8,
-      shade9: shade9 ?? this.shade9,
-      shade10: shade10 ?? this.shade10,
     );
   }
 
@@ -149,11 +133,6 @@ class WTThemeExtension extends ThemeExtension<WTThemeExtension> {
       shade3: Color.lerp(shade3, other.shade3, t),
       shade4: Color.lerp(shade4, other.shade4, t),
       shade5: Color.lerp(shade5, other.shade5, t),
-      shade6: Color.lerp(shade6, other.shade6, t),
-      shade7: Color.lerp(shade7, other.shade7, t),
-      shade8: Color.lerp(shade8, other.shade8, t),
-      shade9: Color.lerp(shade9, other.shade9, t),
-      shade10: Color.lerp(shade10, other.shade10, t),
     );
   }
 

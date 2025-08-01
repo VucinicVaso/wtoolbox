@@ -1,8 +1,8 @@
-# ThemeCatalog
+# ThemeService
 
-Servis **ThemeCatalog** sluzi za dinamicku izmjenu tema aplikacije.
+Servis **ThemeService** sluzi za dinamicku izmjenu tema aplikacije.
 
 Servis sadrzi:
 - Theme
-- ThemeCatalog
 - ThemeExtension
+- ThemeService

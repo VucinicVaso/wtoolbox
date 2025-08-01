@@ -28,7 +28,7 @@ import 'package:wtoolbox/file_manager/pdf/wtoolbox_pdf_service.dart';
 import 'package:wtoolbox/file_manager/pdf/impl/wtoolbox_pdf_service_impl.dart';
 import 'package:wtoolbox/http_adapter/wtoolbox_http_adapter.dart';
 import 'package:wtoolbox/http_adapter/impl/wtoolbox_http_adapter_impl.dart';
-import 'package:wtoolbox/theme/wtoolbox_theme_catalog.dart';
+import 'package:wtoolbox/theme/wtoolbox_theme_service.dart';
 import 'package:wtoolbox/theme/impl/wtoolbox_theme_service_impl.dart';
 import 'package:wtoolbox/widget_factory/factory/wtoolbox_widget_factory.dart';
 import 'package:wtoolbox/widget_factory/factory/impl1/wtoolbox_widget_factory_impl1.dart';
@@ -54,10 +54,10 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTPDFService>(WTPDFServiceImpl());
     Get.put<WTHttpAdapter>(WTHttpAdapterImpl(dotenv.get('SSL_CERTIFICATE')));
     Get.put<WTTranslation>(WTTranslationImpl());
-    Get.put<WTThemeCatalog>(WTThemeCatalogImpl());
+    Get.put<WTThemeService>(WTThemeServiceImpl());
 
     WTWidgetFactory? widgetFactory1 = WTWidgetFactoryImpl1()
-      ..setTheme(Get.find<WTThemeCatalog>().themeExtension!);
+      ..setTheme(Get.find<WTThemeService>().themeExtension!);
     Get.put<WTWidgetFactory>(widgetFactory1);
   }
 
@@ -67,7 +67,7 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     await Get.delete<WTEncryption>(force: true);
     await Get.delete<WTMessageBrokerService>(force: true);
     await Get.delete<WTTranslation>(force: true);
-    await Get.delete<WTThemeCatalog>(force: true);
+    await Get.delete<WTThemeService>(force: true);
     await Get.delete<WTRouter>(force: true);
     await Get.delete<WTApplicationStarterService>(force: true);
     await Get.delete<WTWidgetFactory>(force: true);
