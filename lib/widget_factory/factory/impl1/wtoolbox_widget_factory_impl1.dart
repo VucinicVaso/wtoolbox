@@ -190,31 +190,11 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
           ..setMainAxisAlignment(MainAxisAlignment.center)
           ..setCrossAxisAlignment(CrossAxisAlignment.center);
         return component;
-      case WTLayoutType.horizontalFlat:
-        var component = WTLayoutHorizontal()
-          ..setBuildContext(getCurrentContext())
-          ..setAlignment(null)
-          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setBackgroundColor(Colors.transparent)
-          ..setMainAxisAlignment(MainAxisAlignment.center)
-          ..setCrossAxisAlignment(CrossAxisAlignment.center);
-        return component;
       case WTLayoutType.vertical:
         var component = WTLayoutVertical()
           ..setBuildContext(getCurrentContext())
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
-          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setBackgroundColor(Colors.transparent)
-          ..setMainAxisAlignment(MainAxisAlignment.start)
-          ..setCrossAxisAlignment(CrossAxisAlignment.center);
-        return component;
-      case WTLayoutType.verticalFlat:
-        var component = WTLayoutVertical()
-          ..setBuildContext(getCurrentContext())
-          ..setAlignment(null)
-          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setBackgroundColor(Colors.transparent)
           ..setMainAxisAlignment(MainAxisAlignment.start)
@@ -231,34 +211,12 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
           ..setMainAxisAlignment(MainAxisAlignment.start)
           ..setCrossAxisAlignment(CrossAxisAlignment.center);
         return component;
-      case WTLayoutType.verticalFlatScrollable:
-        var component = WTLayoutVerticalScrollable()
-          ..setBuildContext(getCurrentContext())
-          ..setScrollable()
-          ..setAlignment(null)
-          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setBackgroundColor(Colors.transparent)
-          ..setMainAxisAlignment(MainAxisAlignment.start)
-          ..setCrossAxisAlignment(CrossAxisAlignment.center);
-        return component;
       case WTLayoutType.verticalExpanded:
         var component = WTLayoutVerticalExpanded()
           ..setBuildContext(getCurrentContext())
           ..setExpandable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
-          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setBackgroundColor(Colors.transparent)
-          ..setMainAxisAlignment(MainAxisAlignment.start)
-          ..setCrossAxisAlignment(CrossAxisAlignment.center);
-        return component;
-      case WTLayoutType.verticalFlatExpanded:
-        var component = WTLayoutVerticalExpanded()
-          ..setBuildContext(getCurrentContext())
-          ..setExpandable()
-          ..setAlignment(null)
-          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setBackgroundColor(Colors.transparent)
           ..setMainAxisAlignment(MainAxisAlignment.start)
@@ -271,18 +229,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
           ..setScrollable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
-          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
-          ..setBackgroundColor(Colors.transparent)
-          ..setMainAxisAlignment(MainAxisAlignment.start)
-          ..setCrossAxisAlignment(CrossAxisAlignment.center);
-        return component;
-      case WTLayoutType.verticalFlatExpandedAndScrollable:
-        var component = WTLayoutVerticalExpandedAndScrollable()
-          ..setBuildContext(getCurrentContext())
-          ..setExpandable()
-          ..setScrollable()
-          ..setAlignment(null)
-          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
           ..setBackgroundColor(Colors.transparent)
           ..setMainAxisAlignment(MainAxisAlignment.start)

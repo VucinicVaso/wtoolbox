@@ -24,15 +24,10 @@ enum WTFooterType {
 
 enum WTLayoutType {
   horizontal,
-  horizontalFlat,
   vertical,
-  verticalFlat,
   verticalScrollable,
-  verticalFlatScrollable,
   verticalExpanded,
-  verticalFlatExpanded,
   verticalExpandedAndScrollable,
-  verticalFlatExpandedAndScrollable
 }
 
 enum WTEmptyType {

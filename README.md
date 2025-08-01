@@ -1,8 +1,9 @@
 # WTOOLBOX
+Framework for creating mobile applications.
 
 
 ## ABOUT:
-Framework for creating mobile applications. WToolbox includes the following services:
+WToolbox includes the following services:
 - WebSocket service
 - OAuth2 service
 - local database

@@ -10,6 +10,9 @@ class WTLayoutVertical extends WTLayout {
       builder: (context, constraints) {
         width  = constraints.maxWidth;
         height = constraints.maxHeight;
+        if(small == true) { width = width! * 0.33; }
+        if(medium == true) { width = width! * 0.5; }
+        if(large == true) { width = width; }
 
         return Container(
           key: getUniqueKey(),
