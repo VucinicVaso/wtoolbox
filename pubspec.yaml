@@ -29,8 +29,6 @@ dependencies:
   flutter_appauth: ^8.0.3                # OAuth lib
   local_auth: ^2.3.0                     # biometrics
   webview_flutter: ^4.10.0               # lib for displaying web pages
-  syncfusion_flutter_charts: ^28.2.5+1   # lib for charts
-  mobile_scanner: ^6.0.6                 # lib qr code scanner
   date_format: ^2.0.9                    # lib for date formatting
   intl: ^0.19.0                          #
   collection: ^1.19.1                    # collections and utilities functions and classes related to collections.
@@ -46,8 +44,6 @@ dependencies:
   easy_pdf_viewer: ^1.0.8                # pdf viewer
   share_plus: ^10.1.4                    # email lib
   flutter_svg: ^2.0.17                   # svg lib
-  group_list_view: ^1.1.1                # lib for group_list_view
-  shimmer: ^3.0.0                        # shimmer loading effect lib
   date_picker_plus: ^4.2.0               # datepicker
   signature: ^6.0.0                      # lib for signature
 

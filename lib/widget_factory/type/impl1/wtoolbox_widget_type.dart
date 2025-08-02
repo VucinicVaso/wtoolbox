@@ -24,6 +24,7 @@ enum WTFooterType {
 
 enum WTLayoutType {
   horizontal,
+  horizontalScrollable,
   vertical,
   verticalScrollable,
   verticalExpanded,

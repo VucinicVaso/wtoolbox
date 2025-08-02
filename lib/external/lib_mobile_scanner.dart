@@ -1,1 +1,0 @@
-export 'package:mobile_scanner/mobile_scanner.dart';

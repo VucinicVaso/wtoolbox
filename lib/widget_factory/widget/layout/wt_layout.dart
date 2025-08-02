@@ -2,12 +2,6 @@ import '../wt_widget.dart';
 
 abstract class WTLayout extends WTWidget {
 
-  bool? scrollable = false;
-  void setScrollable() { scrollable = true; }
-
-  bool? expandable = false;
-  void setExpandable() { expandable = true; }
-
   // layout size
   bool? small, medium, large = false;
   void sm() { small = true; }

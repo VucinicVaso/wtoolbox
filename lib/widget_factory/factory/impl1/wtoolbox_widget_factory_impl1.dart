@@ -8,6 +8,7 @@ import '../../widget/divider/wt_divider.dart';
 import '../../widget/divider/horizontal/wt_divider_horizontal.dart';
 import '../../widget/layout/wt_layout.dart';
 import '../../widget/layout/horizontal/wt_layout_horizontal.dart';
+import '../../widget/layout/horizontal/wt_layout_horizontal_scrollable.dart';
 import '../../widget/layout/vertical/wt_layout_vertical.dart';
 import '../../widget/layout/vertical/wt_layout_vertical_scrollable.dart';
 import '../../widget/layout/vertical/wt_layout_vertical_expanded.dart';
@@ -190,6 +191,16 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
           ..setMainAxisAlignment(MainAxisAlignment.center)
           ..setCrossAxisAlignment(CrossAxisAlignment.center);
         return component;
+      case WTLayoutType.horizontalScrollable:
+        var component = WTLayoutHorizontalScrollable()
+          ..setBuildContext(getCurrentContext())
+          ..setAlignment(null)
+          ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
+          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
+          ..setBackgroundColor(Colors.transparent)
+          ..setMainAxisAlignment(MainAxisAlignment.center)
+          ..setCrossAxisAlignment(CrossAxisAlignment.center);
+        return component;      
       case WTLayoutType.vertical:
         var component = WTLayoutVertical()
           ..setBuildContext(getCurrentContext())
@@ -203,7 +214,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalScrollable:
         var component = WTLayoutVerticalScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setScrollable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -214,7 +224,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalExpanded:
         var component = WTLayoutVerticalExpanded()
           ..setBuildContext(getCurrentContext())
-          ..setExpandable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
@@ -225,8 +234,6 @@ class WTWidgetFactoryImpl1 extends WTWidgetFactory {
       case WTLayoutType.verticalExpandedAndScrollable:
         var component = WTLayoutVerticalExpandedAndScrollable()
           ..setBuildContext(getCurrentContext())
-          ..setExpandable()
-          ..setScrollable()
           ..setAlignment(null)
           ..setPadding(left: 7.5, top: 12.5, right: 7.5, bottom: 12.5)
           ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
