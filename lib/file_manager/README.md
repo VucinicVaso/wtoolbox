@@ -1,7 +1,7 @@
 # Servisi za rad sa dokumentima
 
-**FileService** servis sluzi za rad sa fajlovima.
+**File** servis sluzi za rad sa fajlovima.
 
-**ImageService** servis sluzi za crop-ovanje slika.
+**Image** servis sluzi za crop-ovanje slika.
 
-**PdfService** servis sluzi za kreiranje PDF fajlova.
+**PDF** servis sluzi za kreiranje PDF fajlova.

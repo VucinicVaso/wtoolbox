@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
-import 'package:wtoolbox/widget_factory/factory/wtoolbox_widget_factory.dart';
+import 'package:wtoolbox/ui_factory/factory/wt_ui_factory.dart';
 
 //ignore: must_be_immutable
 abstract class WTView<T> extends StatelessWidget {
 
   WTView({ super.key }) {
-    initWidgetBuilder();
+    initUIFactory();
   }
 
   T? controller;
   void setController(T? wtController) { controller = wtController; }
 
-  WTWidgetFactory? widgetBuilder;
-  void initWidgetBuilder() { widgetBuilder = Get.find<WTWidgetFactory>(); }
+  WTUIFactory? uiFactory;
+  void initUIFactory() { uiFactory = Get.find<WTUIFactory>(); }
 
 }

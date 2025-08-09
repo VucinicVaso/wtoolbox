@@ -20,18 +20,18 @@ import 'package:wtoolbox/biometrics/wtoolbox_biometrics.dart';
 import 'package:wtoolbox/biometrics/impl/wtoolbox_biometrics_impl.dart';
 import 'package:wtoolbox/application_lifecycle/wtoolbox_application_lifecycle.dart';
 import 'package:wtoolbox/application_lifecycle/impl/wtoolbox_application_lifecycle_impl.dart';
-import 'package:wtoolbox/file_manager/file/wtoolbox_file_service.dart';
-import 'package:wtoolbox/file_manager/file/impl/wtoolbox_file_service_impl.dart';
-import 'package:wtoolbox/file_manager/image/wtoolbox_image_service.dart';
-import 'package:wtoolbox/file_manager/image/impl/wtoolbox_image_service_impl.dart';
-import 'package:wtoolbox/file_manager/pdf/wtoolbox_pdf_service.dart';
-import 'package:wtoolbox/file_manager/pdf/impl/wtoolbox_pdf_service_impl.dart';
+import 'package:wtoolbox/file_manager/file/wtoolbox_file.dart';
+import 'package:wtoolbox/file_manager/file/impl/wtoolbox_file_impl.dart';
+import 'package:wtoolbox/file_manager/image/wtoolbox_image.dart';
+import 'package:wtoolbox/file_manager/image/impl/wtoolbox_image_impl.dart';
+import 'package:wtoolbox/file_manager/pdf/wtoolbox_pdf.dart';
+import 'package:wtoolbox/file_manager/pdf/impl/wtoolbox_pdf_impl.dart';
 import 'package:wtoolbox/http_adapter/wtoolbox_http_adapter.dart';
 import 'package:wtoolbox/http_adapter/impl/wtoolbox_http_adapter_impl.dart';
 import 'package:wtoolbox/theme/wtoolbox_theme_service.dart';
 import 'package:wtoolbox/theme/impl/wtoolbox_theme_service_impl.dart';
-import 'package:wtoolbox/widget_factory/factory/wtoolbox_widget_factory.dart';
-import 'package:wtoolbox/widget_factory/factory/impl1/wtoolbox_widget_factory_impl1.dart';
+import 'package:wtoolbox/ui_factory/factory/wt_ui_factory.dart';
+import 'package:wtoolbox/ui_factory/factory/impl/wt_ui_factory_impl.dart';
 import '../wtoolbox_dependency_container.dart';
 
 class WTDependencyContainerImpl extends WTDependencyContainer {
@@ -49,16 +49,16 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTOAuth2>(WTOAuth2Impl());
     Get.put<WTApplicationLifecycle>(WTApplicationLifecycleImpl());
     Get.put<WTBiometrics>(WTBiometricsImpl());
-    Get.put<WTFileService>(WTFileServiceImpl());
-    Get.put<WTImageService>(WTImageServiceImpl());
-    Get.put<WTPDFService>(WTPDFServiceImpl());
+    Get.put<WTFile>(WTFileImpl());
+    Get.put<WTImage>(WTImageImpl());
+    Get.put<WTPDF>(WTPDFImpl());
     Get.put<WTHttpAdapter>(WTHttpAdapterImpl(dotenv.get('SSL_CERTIFICATE')));
     Get.put<WTTranslation>(WTTranslationImpl());
     Get.put<WTThemeService>(WTThemeServiceImpl());
 
-    WTWidgetFactory? widgetFactory1 = WTWidgetFactoryImpl1()
+    WTUIFactory? widgetFactory1 = WTUIFactoryImpl()
       ..setTheme(Get.find<WTThemeService>().themeExtension!);
-    Get.put<WTWidgetFactory>(widgetFactory1);
+    Get.put<WTUIFactory>(widgetFactory1);
   }
 
   @override
@@ -70,13 +70,13 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     await Get.delete<WTThemeService>(force: true);
     await Get.delete<WTRouter>(force: true);
     await Get.delete<WTApplicationStarterService>(force: true);
-    await Get.delete<WTWidgetFactory>(force: true);
+    await Get.delete<WTUIFactory>(force: true);
     await Get.delete<WTOAuth2>(force: true);
     await Get.delete<WTBiometrics>(force: true);
     await Get.delete<WTApplicationLifecycle>(force: true);
-    await Get.delete<WTFileService>(force: true);
-    await Get.delete<WTImageService>(force: true);
-    await Get.delete<WTPDFService>(force: true);
+    await Get.delete<WTFile>(force: true);
+    await Get.delete<WTImage>(force: true);
+    await Get.delete<WTPDF>(force: true);
     await Get.delete<WTHttpAdapter>(force: true);
 
     await Get.find<WTDatabase>().closeConnection();
