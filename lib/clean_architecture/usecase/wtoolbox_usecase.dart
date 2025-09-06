@@ -1,5 +1,5 @@
-abstract class WTUseCase<Type> {
+abstract class WTUseCase<T> {
 
-  Future<Type> call();
+  Future<T> call();
 
 }
