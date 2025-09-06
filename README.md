@@ -1,5 +1,5 @@
 # WTOOLBOX
-Framework for creating mobile applications.
+Package for creating mobile applications.
 
 
 ## ABOUT:
