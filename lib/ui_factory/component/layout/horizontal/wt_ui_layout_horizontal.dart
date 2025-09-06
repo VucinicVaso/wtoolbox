@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../wt_ui_layout.dart';
 
-class WTUILayoutVerticalScrollable extends WTUILayout {
+class WTUILayoutHorizontal extends WTUILayout {
 
   @override
   Widget? build() {
@@ -10,28 +10,26 @@ class WTUILayoutVerticalScrollable extends WTUILayout {
       builder: (context, constraints) {
         width  = constraints.maxWidth;
         height = constraints.maxHeight;
-    
+      
         return Container(
           key: getUniqueKey(),
+          width: width,
           color: backgroundColor,
           padding: padding,
           margin: margin,
-          width: width,
-          alignment: alignment,
-          child: widgets!.isEmpty 
+          child: components!.isEmpty
             ? SizedBox.shrink()
-            : SingleChildScrollView(
-              child: Column(
+            : Row(
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: mainAxisAlignment!,
                 crossAxisAlignment: crossAxisAlignment!,
                 children: <Widget>[
-                  ...widgets!.map((c) {
+                  ...components!.map((c) {
                     c..setWidth(width)..setHeight(height);
                     return c.build()!;
                   }),
                 ],
               ),
-            ),
         );
       }
     );

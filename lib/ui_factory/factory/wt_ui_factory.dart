@@ -1,13 +1,14 @@
 import 'wt_ui_factory_config.dart';
-import '../type/impl/wt_ui_type.dart';
-import '../widget/scaffold/wt_ui_scaffold.dart';
-import '../widget/header/wt_ui_header.dart';
-import '../widget/body/wt_ui_body.dart';
-import '../widget/footer/wt_ui_footer.dart';
-import '../widget/layout/wt_ui_layout.dart';
-import '../widget/empty/wt_ui_empty.dart';
-import '../widget/space/wt_ui_space.dart';
-import '../widget/divider/wt_ui_divider.dart';
+import '../type/impl/wt_ui_component_type.dart';
+import '../component/scaffold/wt_ui_scaffold.dart';
+import '../component/header/wt_ui_header.dart';
+import '../component/body/wt_ui_body.dart';
+import '../component/footer/wt_ui_footer.dart';
+import '../component/layout/wt_ui_layout.dart';
+import '../component/empty/wt_ui_empty.dart';
+import '../component/space/wt_ui_space.dart';
+import '../component/divider/wt_ui_divider.dart';
+import '../component/wrap/wt_ui_wrap.dart';
 
 abstract class WTUIFactory with WTUIFactoryConfig {
 
@@ -26,5 +27,7 @@ abstract class WTUIFactory with WTUIFactoryConfig {
   WTUIDivider? createDivider(WTUIDividerType type);
 
   WTUISpace? createSpace(WTUISpaceType type);
+
+  WTUIWrap? createWrap(WTUIWrapType type);
 
 }

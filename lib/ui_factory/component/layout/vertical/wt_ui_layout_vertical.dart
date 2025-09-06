@@ -21,13 +21,13 @@ class WTUILayoutVertical extends WTUILayout {
           margin: margin,
           width: width,
           alignment: alignment,
-          child: widgets!.isEmpty 
+          child: components!.isEmpty 
             ? SizedBox.shrink()
             : Column(
                 mainAxisAlignment: mainAxisAlignment!,
                 crossAxisAlignment: crossAxisAlignment!,
                 children: <Widget>[
-                  ...widgets!.map((c) {
+                  ...components!.map((c) {
                     c..setWidth(width)..setHeight(height);
                     return c.build()!;
                   }),

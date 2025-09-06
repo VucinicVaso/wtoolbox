@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_material_symbols.dart';
 import '../wt_ui_factory.dart';
-import '../../type/impl/wt_ui_type.dart';
-import '../../widget/empty/wt_ui_empty.dart';
-import '../../widget/empty/impl/wt_ui_empty_impl.dart';
-import '../../widget/divider/wt_ui_divider.dart';
-import '../../widget/divider/horizontal/wt_ui_divider_horizontal.dart';
-import '../../widget/layout/wt_ui_layout.dart';
-import '../../widget/layout/horizontal/wt_ui_layout_horizontal.dart';
-import '../../widget/layout/horizontal/wt_ui_layout_horizontal_scrollable.dart';
-import '../../widget/layout/vertical/wt_ui_layout_vertical.dart';
-import '../../widget/layout/vertical/wt_ui_layout_vertical_scrollable.dart';
-import '../../widget/layout/vertical/wt_ui_layout_vertical_expanded.dart';
-import '../../widget/layout/vertical/wt_ui_layout_vertical_expanded_and_scrollable.dart';
-import '../../widget/scaffold/wt_ui_scaffold.dart';
-import '../../widget/scaffold/impl/wt_ui_scaffold_impl.dart';
-import '../../widget/header/wt_ui_header.dart';
-import '../../widget/header/impl/wt_ui_header_impl.dart';
-import '../../widget/body/wt_ui_body.dart';
-import '../../widget/body/impl/wt_ui_body_impl.dart';
-import '../../widget/footer/wt_ui_footer.dart';
-import '../../widget/footer/fixed/wt_ui_footer_fixed.dart';
-import '../../widget/space/wt_ui_space.dart';
-import '../../widget/space/basic/wt_ui_space_basic.dart';
+import '../../type/impl/wt_ui_component_type.dart';
+import '../../component/empty/wt_ui_empty.dart';
+import '../../component/empty/impl/wt_ui_empty_impl.dart';
+import '../../component/divider/wt_ui_divider.dart';
+import '../../component/divider/horizontal/wt_ui_divider_horizontal.dart';
+import '../../component/layout/wt_ui_layout.dart';
+import '../../component/layout/horizontal/wt_ui_layout_horizontal.dart';
+import '../../component/layout/horizontal/wt_ui_layout_horizontal_scrollable.dart';
+import '../../component/layout/vertical/wt_ui_layout_vertical.dart';
+import '../../component/layout/vertical/wt_ui_layout_vertical_scrollable.dart';
+import '../../component/layout/vertical/wt_ui_layout_vertical_expanded.dart';
+import '../../component/layout/vertical/wt_ui_layout_vertical_expanded_and_scrollable.dart';
+import '../../component/scaffold/wt_ui_scaffold.dart';
+import '../../component/scaffold/impl/wt_ui_scaffold_impl.dart';
+import '../../component/header/wt_ui_header.dart';
+import '../../component/header/impl/wt_ui_header_impl.dart';
+import '../../component/body/wt_ui_body.dart';
+import '../../component/body/impl/wt_ui_body_impl.dart';
+import '../../component/footer/wt_ui_footer.dart';
+import '../../component/footer/fixed/wt_ui_footer_fixed.dart';
+import '../../component/space/wt_ui_space.dart';
+import '../../component/space/basic/wt_ui_space_basic.dart';
+import '../../component/wrap/wt_ui_wrap.dart';
+import '../../component/wrap/impl/wt_ui_wrap_impl.dart';
 
 class WTUIFactoryImpl extends WTUIFactory {
 
@@ -303,6 +305,17 @@ class WTUIFactoryImpl extends WTUIFactory {
           ..setBuildContext(getCurrentContext())
           ..setHeight(15.0)
           ..setWidth(0.0);
+        return component;
+    }
+  }
+
+  @override
+  WTUIWrap? createWrap(WTUIWrapType type) {
+    switch(type) {
+      case WTUIWrapType.wrap: 
+        var component = WTUIWrapImpl()
+          ..setPadding(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0)
+          ..setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0);
         return component;
     }
   }

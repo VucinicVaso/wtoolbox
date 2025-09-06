@@ -1,6 +1,6 @@
-import '../wt_ui_widget.dart';
+import '../wt_ui_component.dart';
 
-abstract class WTUILayout extends WTUIWidget {
+abstract class WTUILayout extends WTUIComponent {
 
   // layout size
   bool? small, medium, large = false;
@@ -14,8 +14,8 @@ abstract class WTUILayout extends WTUIWidget {
     setMargin(left: 0.0, top: 0.0, right: 0.0, bottom: 0.0);
   }
 
-  List<WTUIWidget>? widgets = List<WTUIWidget>.empty(growable: true);
-  void addWidget(WTUIWidget? v) { widgets!.add(v!); }
-  void addWidgets(List<WTUIWidget>? v) { widgets!.addAll(v!); }
+  List<WTUIComponent>? components = List<WTUIComponent>.empty(growable: true);
+  void addWidget(WTUIComponent? v) { components!.add(v!); }
+  void addWidgets(List<WTUIComponent>? v) { components!.addAll(v!); }
 
 }

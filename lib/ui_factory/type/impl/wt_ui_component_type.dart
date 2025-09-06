@@ -32,7 +32,7 @@ enum WTUILayoutType {
 }
 
 enum WTUIEmptyType {
- empty 
+ empty
 }
 
 enum WTUIDividerType {
@@ -46,4 +46,9 @@ enum WTUISpaceType {
   vertical5,
   vertical10,
   vertical15
+}
+
+
+enum WTUIWrapType {
+  wrap
 }

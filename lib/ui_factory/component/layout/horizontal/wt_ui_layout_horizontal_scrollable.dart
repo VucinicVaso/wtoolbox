@@ -16,7 +16,7 @@ class WTUILayoutHorizontalScrollable extends WTUILayout {
           color: backgroundColor,
           padding: padding,
           margin: margin,
-          child: widgets!.isEmpty
+          child: components!.isEmpty
             ? SizedBox.shrink()
             : SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -25,7 +25,7 @@ class WTUILayoutHorizontalScrollable extends WTUILayout {
                   mainAxisAlignment: mainAxisAlignment!,
                   crossAxisAlignment: crossAxisAlignment!,
                   children: <Widget>[
-                    ...widgets!.map((c) {
+                    ...components!.map((c) {
                       c..setWidth(width)..setHeight(height);
                       return c.build()!;
                     }),

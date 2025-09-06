@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../wt_ui_widget.dart';
+import '../wt_ui_component.dart';
 
-abstract class WTUIFooter extends WTUIWidget {
+abstract class WTUIFooter extends WTUIComponent {
 
   double? itemIconSize, itemLabelSize;
   void setItemIconSize(double? v) { itemIconSize = v; }

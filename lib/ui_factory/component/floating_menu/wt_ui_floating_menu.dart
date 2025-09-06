@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../wt_ui_widget.dart';
+import '../wt_ui_component.dart';
 
-abstract class WTUIFloatingMenu extends WTUIWidget {
+abstract class WTUIFloatingMenu extends WTUIComponent {
 
   bool? mini = false;
   void small() { mini = true; }

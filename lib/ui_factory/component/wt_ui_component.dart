@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class WTUIWidget {
+abstract class WTUIComponent {
 
   UniqueKey? getUniqueKey() { return UniqueKey(); }
 

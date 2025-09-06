@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../wt_ui_widget.dart';
+import '../wt_ui_component.dart';
 import '../header/wt_ui_header.dart';
 import '../body/wt_ui_body.dart';
 import '../floating_menu/wt_ui_floating_menu.dart';
 import '../footer/wt_ui_footer.dart';
 
-abstract class WTUIScaffold extends WTUIWidget {
+abstract class WTUIScaffold extends WTUIComponent {
 
   GlobalKey? globalKey;
   void setGlobalKey() { globalKey = GlobalKey<ScaffoldState>(); }
