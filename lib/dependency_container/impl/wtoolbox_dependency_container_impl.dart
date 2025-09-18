@@ -56,9 +56,9 @@ class WTDependencyContainerImpl extends WTDependencyContainer {
     Get.put<WTTranslation>(WTTranslationImpl());
     Get.put<WTThemeService>(WTThemeServiceImpl());
 
-    WTUIFactory? widgetFactory1 = WTUIFactoryImpl()
-      ..setTheme(Get.find<WTThemeService>().themeExtension!);
-    Get.put<WTUIFactory>(widgetFactory1);
+    WTUIFactory? uiFactory = WTUIFactoryImpl()
+      ..setTheme(Get.find<WTThemeService>().getTheme()!.themeExtension!);
+    Get.put<WTUIFactory>(uiFactory);
   }
 
   @override

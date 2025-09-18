@@ -8,12 +8,12 @@ enum WTThemeEnums {
 abstract class WTThemeService {
 
   WTTheme? lightTheme;
-  void setLightTheme(WTWTheme? wtTheme);
+  void setLightTheme(WTTheme? wtTheme);
   WTTheme? getLightTheme();
   void useLightTheme();
 
   WTTheme? darkTheme;
-  void setDarkTheme(WTWTheme? wtTheme);
+  void setDarkTheme(WTTheme? wtTheme);
   WTTheme? getDarkTheme();
   void useDarkTheme();
 
