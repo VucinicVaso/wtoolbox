@@ -1,12 +1,13 @@
-import 'dart:ui';
-import '../wtoolbox_theme.dart';
-import '../wtoolbox_theme_extension.dart';
+import 'package:flutter/material.dart';
+import '../wt_theme.dart';
+import '../wt_theme_extension.dart';
 
 class WTThemeLight extends WTTheme {
 
   WTThemeLight() {
     setName('light');
-    setTheme();
+    setThemeExtension();
+    setThemeData();
   }
 
   @override
@@ -15,7 +16,18 @@ class WTThemeLight extends WTTheme {
   String? getName() { return name; }
 
   @override
-  void setTheme() {
+  void setThemeData() {
+    themeData = ThemeData
+      .light()
+      .copyWith(
+        extensions: <ThemeExtension<dynamic>>[ getThemeExtension()! ]
+      );
+  }
+  @override
+  ThemeData? getThemeData() { return themeData; }
+
+  @override
+  void setThemeExtension() {
     themeExtension = WTThemeExtension(
       background1: const Color(0xFFffffff),
       background2: const Color(0xFFF5F5F5),
@@ -47,6 +59,6 @@ class WTThemeLight extends WTTheme {
     );
   }
   @override
-  WTThemeExtension? getTheme() { return themeExtension!; }
+  WTThemeExtension? getThemeExtension() { return themeExtension!; }
 
 } 

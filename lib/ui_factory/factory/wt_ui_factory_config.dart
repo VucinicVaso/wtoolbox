@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wtoolbox/external/lib_getx.dart';
-import 'package:wtoolbox/theme/wtoolbox_theme_extension.dart';
+import 'package:wtoolbox/theme/wt_theme_extension.dart';
 
 mixin WTUIFactoryConfig {
 
