@@ -32,7 +32,7 @@ import 'package:wtoolbox/theme/wt_theme_service.dart';
 import 'package:wtoolbox/theme/impl/wt_theme_service_impl.dart';
 import 'package:wtoolbox/ui_factory/factory/wt_ui_factory.dart';
 import 'package:wtoolbox/ui_factory/factory/impl/wt_ui_factory_impl.dart';
-import '../wtoolbox_dependency_container.dart';
+import '../wt_dependency_container.dart';
 
 class WTDependencyContainerImpl extends WTDependencyContainer {
 

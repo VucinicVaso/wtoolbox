@@ -1,6 +1,6 @@
 import 'external/lib_getx.dart';
-import 'dependency_container/wtoolbox_dependency_container.dart';
-import 'dependency_container/impl/wtoolbox_dependency_container_impl.dart';
+import 'dependency_container/wt_dependency_container.dart';
+import 'dependency_container/impl/wt_dependency_container_impl.dart';
 import 'application_starter/wtoolbox_application_starter.dart';
 import 'application_starter/wtoolbox_application_starter_service.dart';
 import 'router/wtoolbox_router.dart';
